@@ -30,12 +30,12 @@
 	align-items    : center;
 	justify-content: center;
 
-	--size       : 40px;
+	--size       : 52px;
 	height       : var(--size);
 	padding      : 0 calc(var(--size) / 2);
 	border-radius: var(--radius-small);
 
-	font-size  : 14px;
+	font-size  : 16px;
 	font-family: var(--font-base);
 	font-weight: bold;
 
@@ -74,13 +74,13 @@
 
 	// size
 	&-large {
-		--size   : 52px;
-		font-size: 16px;
+		--size   : 60px;
+		font-size: 18px;
 	}
 
 	&-small {
-		--size   : 28px;
-		font-size: 12px;
+		--size   : 40px;
+		font-size: 14px;
 	}
 
 	// color
