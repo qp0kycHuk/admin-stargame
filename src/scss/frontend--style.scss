@@ -9,7 +9,7 @@
 	@include getColors(#31A043, "green");
 	@include getColors(#EB5757, "red");
 	@include getColors(#828A99, "icon");
-	@include getColors(#333333, "text");
+	@include getColors(#191919, "text");
 
 	--bg1: #ffffff;
 	--bg2: #F4F5F6;
@@ -91,6 +91,14 @@ body {
 	justify-content: center;
 	padding: 15px;
 
+	@media(max-width:$md) {
+		padding: 60px 15px;
+	}
+
+	&__title {
+		letter-spacing: -0.5px;
+	}
+
 	&-form {
 		width: 320px;
 		max-width: 100%;
@@ -109,6 +117,22 @@ body {
 			&+& {
 				margin-left: 22px;
 			}
+		}
+	}
+
+}
+
+
+.theme-toggle {
+	.form-toggle-target:before {
+		background: var(--color-text);
+	}
+
+	.form-input-checkbox:checked~.form-toggle-target {
+		background: var(--bg3);
+
+		&:before {
+			background: var(--color-primary);
 		}
 	}
 }

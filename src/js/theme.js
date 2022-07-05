@@ -29,7 +29,7 @@ const destroy = () => {
 
 function changeHandler(event) {
   if (event.target.closest('.-theme-changer-')) {
-    if (event.target.checked) {
+    if (!event.target.checked) {
       setTheme(themes.dark);
     } else {
       setTheme(themes.clear);
@@ -59,9 +59,9 @@ function setTheme(theme) {
   const changers = document.querySelectorAll('.-theme-changer-')
   Array.from(changers).forEach(element => {
     if (theme.name == 'dark') {
-      element.checked = true
-    } else {
       element.checked = false
+    } else {
+      element.checked = true
     }
   });
 }

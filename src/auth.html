@@ -11,7 +11,7 @@
 <body>
   <div class="root">
     <div class="auth-page">
-      <div class="text-h1 text--center mb-10">
+      <div class="auth-page__title text-subtitle-1 text-md-h3 text-lg-h1 text--center mb-10">
         Для входа в систему <br>
         необходимо авторизироваться
       </div>
@@ -20,22 +20,39 @@
         <label class="form-field mb-5">
           <div class="text-body-1 text--medium mb-2">Логин</div>
           <div class="form-input-cover">
-            <input type="text" class="form-input" placeholder="Введите логин">
+            <input type="text" class="form-input pl-10" placeholder="Введите логин">
+            <div class="form-input-start pl-4">
+              <svg class="icon color-primary">
+                <use xlink:href="img/icons.svg#user" />
+              </svg>
+            </div>
           </div>
         </label>
         <label class="form-field">
           <div class="text-body-1 text--medium mb-2">Пароль</div>
           <div class="form-input-cover">
-            <input type="text" class="form-input" placeholder="Введите пароль">
+            <input type="text" class="form-input pl-10" placeholder="Введите пароль">
+            <div class="form-input-start pl-4">
+              <svg class="icon color-primary">
+                <use xlink:href="img/icons.svg#lock" />
+              </svg>
+            </div>
           </div>
         </label>
         <button class="btn btn--primary btn--fill w-100 mt-6">Войти</button>
       </div>
 
-      <label class="form-field form-checkbox mt-8">
+      <label class="form-field form-checkbox mt-8 theme-toggle">
         <input type="checkbox" class="form-input-checkbox -theme-changer-">
         <div class="text-body-2 mr-4"> Выберите тему интерфейса</div>
-        <div class="form-toggle-target"> </div>
+        <div class="form-toggle-target px-1">
+          <svg class="icon color-primary">
+            <use xlink:href="img/icons.svg#sun" />
+          </svg>
+          <svg class="icon color-text ml-auto fade-80">
+            <use xlink:href="img/icons.svg#moon" />
+          </svg>
+        </div>
       </label>
 
       <div class="language-list">
@@ -74,6 +91,8 @@
         </button>
 
       </div>
+
+      <div class="text-body-2 mt-6">Time: 0.04196596</div>
     </div>
   </div>
 </body>
