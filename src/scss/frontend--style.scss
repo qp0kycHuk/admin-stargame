@@ -17,9 +17,9 @@
 
 	--spacing: 4px;
 
-	--radius-small: 8px;
-	--radius-middle: 12px;
-	--radius-large: 16px;
+	--radius-small: 4px;
+	--radius-middle: 8px;
+	--radius-large: 12px;
 
 	--media-lg: #{$lg};
 	--media-md: #{$md};
@@ -36,6 +36,11 @@
 	--zi-l7: 327;
 	--zi-l8: 328;
 	--zi-l9: 329;
+
+	--header-height: 52px;
+	--sidebar-width: 300px;
+	--space-right: 200px;
+	--space-left: calc(var(--sidebar-width) + 96px);
 }
 
 [data-theme="dark"] {
@@ -76,10 +81,32 @@ body {
 	}
 }
 
+.container {
+	padding-left: var(--space-left);
+	padding-right: var(--space-right);
+}
+
 .root {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+
+}
+
+.language {
+	&-list {
+		display: flex;
+		align-items: center;
+		padding-top: 34px;
+		border-top: 1px solid #D7D7D7;
+		margin-top: 92px;
+
+		&-item {
+			&+& {
+				margin-left: 22px;
+			}
+		}
+	}
 
 }
 
@@ -103,25 +130,21 @@ body {
 		width: 320px;
 		max-width: 100%;
 	}
-}
 
-.language {
-	&-list {
-		display: flex;
-		align-items: center;
-		padding-top: 34px;
-		border-top: 1px solid #D7D7D7;
-		margin-top: 92px;
+	&-language-select {
+		width: 240px;
 
-		&-item {
-			&+& {
-				margin-left: 22px;
-			}
+		@media(min-width:$md) {
+			display: none;
 		}
 	}
 
+	&-language-list {
+		@media(max-width:$md) {
+			display: none;
+		}
+	}
 }
-
 
 .theme-toggle {
 	.form-toggle-target:before {
@@ -135,4 +158,73 @@ body {
 			background: var(--color-primary);
 		}
 	}
+}
+
+.wrapper {
+	&-inner {
+		display: flex;
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background: var(--bg1);
+	padding-top: 6px;
+	padding-bottom: 6px;
+	height: var(--header-height);
+	border-bottom: 1px solid var(--color-text-10);
+	padding-left: 0;
+	padding-right: var(--space-right);
+
+	&-info {
+		display: flex;
+		align-items: center;
+		width: var(--sidebar-width);
+		padding-left: 32px;
+
+	}
+
+	&-filter {
+		display: flex;
+
+		&-field {
+			width: 240px;
+			margin-right: 15px;
+		}
+	}
+}
+
+[data-theme="dark"] .header {
+	background: var(--bg2);
+
+}
+
+.sidebar {
+	width: var(--sidebar-width);
+	background: var(--bg3);
+	border-radius: var(--radius-middle);
+	padding: 28px;
+
+	&-info {
+		&__item {
+			display: flex;
+			align-items: center;
+
+			&+& {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.theme-toggle .form-input-checkbox:checked~.form-toggle-target {
+		background: var(--bg1);
+	}
+}
+
+[data-theme="dark"] .sidebar .theme-toggle .form-input-checkbox~.form-toggle-target {
+	background: var(--color-text-20);
 }
