@@ -53,7 +53,12 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.html$/,
+        include: path.resolve(__dirname, 'src/includes'),
+        use: ['raw-loader']
+      },
     ],
   },
   plugins: [

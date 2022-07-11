@@ -40,7 +40,7 @@
 	--header-height: 52px;
 	--sidebar-width: 300px;
 	--space-right: 200px;
-	--space-left: calc(var(--sidebar-width) + 96px);
+	--space-left: 96px;
 }
 
 [data-theme="dark"] {
@@ -227,4 +227,33 @@ body {
 
 [data-theme="dark"] .sidebar .theme-toggle .form-input-checkbox~.form-toggle-target {
 	background: var(--color-text-20);
+}
+
+.field-small {
+	width: 188px;
+}
+
+.field-middle {
+	width: 310px;
+}
+
+.content {
+	flex-grow: 1;
+}
+
+.table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+
+
+	&-cell {
+		padding: 12px 4px;
+		border: 1px solid var(--color-text-20);
+	}
+
+	&-head &-cell {
+		background: var(--color-primary-20);
+		border-color: var(--color-text-10);
+	}
 }
