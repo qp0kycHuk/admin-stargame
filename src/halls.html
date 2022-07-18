@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Текущие залы - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= require('./includes/header.html').default %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= require('./includes/sidebar.html').default %>
+
+				<div class="content container">
+					<div class="text-h4 color-primary mb-5">Текущие залы</div>
+
+					<div class="text--demibold text-body-1 mb-2">Оборот средств</div>
+					<div class="tabs mb-6">
+						<a href="javascript:;" class="tabs__item btn btn--primary color-text active">Сегодня</a>
+						<a href="javascript:;" class="tabs__item btn btn--primary color-text">Вчера</a>
+						<a href="javascript:;" class="tabs__item btn btn--primary color-text">7 дней</a>
+						<a href="javascript:;" class="tabs__item btn btn--primary color-text">30 дней</a>
+					</div>
+
+					<div class="text-body-1 text--bold mb-2">Выберите период</div>
+					<form action="" class="flex mb-5">
+						<label class="form-field field-small mr-5">
+							<div class="text-body-2 mb-2">Начало</div>
+							<div class="form-input-cover">
+								<input type="text" class="form-input pr-12" data-datepicker placeholder="15 апреля 2022">
+								<div class="form-input-end pr-4">
+									<svg class="icon text-h6 color-primary">
+										<use xlink:href="img/icons.svg#calendar" />
+									</svg>
+								</div>
+
+							</div>
+						</label>
+						<label class="form-field field-small mr-5">
+							<div class="text-body-2 mb-2">Конец</div>
+							<div class="form-input-cover">
+								<input type="text" class="form-input pr-12" data-datepicker placeholder="20 апреля 2022">
+								<div class="form-input-end pr-4">
+									<svg class="icon text-h6 color-primary">
+										<use xlink:href="img/icons.svg#calendar" />
+									</svg>
+								</div>
+
+							</div>
+						</label>
+						<button class="btn btn--primary btn--fill flex-self-end px-md-10">Показать</button>
+					</form>
+
+					<button class="btn btn--link btn--primary text--demibold ">
+						<span class="color-text">Сортировать:</span>
+
+						<span class="color-primary"> по залу </span>
+						<svg class="icon color-primary text-small ml-1">
+							<use xlink:href="img/icons.svg#triangle-down" />
+						</svg>
+					</button>
+
+					<table class="table mt-5">
+						<thead class="table-head">
+							<tr class="table-row">
+								<td class="table-cell text-body-2 text--demibold text--center">ID</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Название</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Баланс</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Компьютер</td>
+								<td class="table-cell text-body-2 text--demibold text--center">In</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Out</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Profit</td>
+							</tr>
+						</thead>
+						<tfoot class="table-footer">
+							<tr class="table-row">
+								<td class="table-cell text-body-2 text--demibold text--center text--demibold">Terminals:</td>
+								<td class="table-cell"></td>
+								<td class="table-cell"></td>
+								<td class="table-cell text-body-2 text--center" >228</td>
+								<td class="table-cell"></td>
+								<td class="table-cell"></td>
+								<td class="table-cell text-body-2 text--center">0,00</td>
+							</tr>
+						</tfoot>
+						<tbody class="table-body">
+              <tr class="table-row">
+								<td class="table-cell text-body-2 text--center text--demibold color-blue" colspan="7">
+									kapitan_ks [martlet]
+								</td>
+							</tr>
+              <tr class="table-row">
+                <td class="table-cell text-body-2 text--center">8531</td>
+                <td class="table-cell text-body-2 text--center">uganda</td>
+                <td class="table-cell text-body-2 text--center">31 325,00 ₽</td>
+                <td class="table-cell text-body-2 text--center">14</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+              </tr>
+              <tr class="table-row">
+                <td class="table-cell text-body-2 text--center">8531</td>
+                <td class="table-cell text-body-2 text--center">uganda</td>
+                <td class="table-cell text-body-2 text--center">31 325,00 ₽</td>
+                <td class="table-cell text-body-2 text--center">14</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+              </tr>
+            </tbody>
+					</table>
+
+					<table class="table mt-5">
+						<thead class="table-head">
+							<tr class="table-row">
+								<td class="table-cell text-body-2 text--demibold text--center">ID</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Название</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Баланс</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Компьютер</td>
+								<td class="table-cell text-body-2 text--demibold text--center">In</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Out</td>
+								<td class="table-cell text-body-2 text--demibold text--center">Profit</td>
+							</tr>
+						</thead>
+						<tfoot class="table-footer">
+							<tr class="table-row">
+								<td class="table-cell text-body-2 text--demibold text--center text--demibold">Terminals:</td>
+								<td class="table-cell"></td>
+								<td class="table-cell"></td>
+								<td class="table-cell text-body-2 text--center" >228</td>
+								<td class="table-cell"></td>
+								<td class="table-cell"></td>
+								<td class="table-cell text-body-2 text--center">0,00</td>
+							</tr>
+						</tfoot>
+						<tbody class="table-body">
+              <tr class="table-row">
+								<td class="table-cell text-body-2 text--center text--demibold color-blue" colspan="7">
+									kapitan_ks [martlet]
+								</td>
+							</tr>
+              <tr class="table-row">
+                <td class="table-cell text-body-2 text--center">8531</td>
+                <td class="table-cell text-body-2 text--center">uganda</td>
+                <td class="table-cell text-body-2 text--center">31 325,00 ₽</td>
+                <td class="table-cell text-body-2 text--center">14</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+              </tr>
+              <tr class="table-row">
+                <td class="table-cell text-body-2 text--center">8531</td>
+                <td class="table-cell text-body-2 text--center">uganda</td>
+                <td class="table-cell text-body-2 text--center">31 325,00 ₽</td>
+                <td class="table-cell text-body-2 text--center">14</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+                <td class="table-cell text-body-2 text--center">0,00</td>
+              </tr>
+            </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>

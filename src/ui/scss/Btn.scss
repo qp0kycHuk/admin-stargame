@@ -127,14 +127,14 @@
 
 
 
-	&:not(&--fill):not(&--light):not(&--contur):not(&--link):not(&--white-bg) {
-		@media(hover) {
-			&:hover {
-				background: var(--btn-color-light);
+	// &:not(&--fill):not(&--light):not(&--contur):not(&--link):not(&--white-bg) {
+	// 	@media(hover) {
+	// 		&:hover {
+	// 			background: var(--btn-color-light);
 
-			}
-		}
-	}
+	// 		}
+	// 	}
+	// }
 
 
 	// variant

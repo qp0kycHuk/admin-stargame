@@ -1,5 +1,6 @@
 import showPass from "./js/show-pass";
 import fancybox from "./js/fancybox";
+import datepicker from './js/datepicker'
 import rangeSlider from './js/range-slider';
 import theme from './js/theme';
 import tab from 'npm-kit-tab';
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => loadHandler())
 function loadHandler() {
 	fancybox.init();
 	showPass.init();
+	datepicker.init(document)
 	rangeSlider.init()
 	tab.init();
 	toggle.init();
