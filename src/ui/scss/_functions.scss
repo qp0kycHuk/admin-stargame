@@ -5,20 +5,20 @@
 }
 
 @mixin getColors($color, $name) {
-  $rgb                   : rgbValuesFromHex($color);
-  $lighten               : lighten($color, 5%);
-  $darken                : darken($color, 5%);
-  --color-#{$name}       : #{$color};
-  --color-#{$name}-10    : rgba(#{$rgb}, 0.1);
-  --color-#{$name}-15    : rgba(#{$rgb}, 0.15);
-  --color-#{$name}-20    : rgba(#{$rgb}, 0.20);
-  --color-#{$name}-30    : rgba(#{$rgb}, 0.30);
-  --color-#{$name}-40    : rgba(#{$rgb}, 0.40);
-  --color-#{$name}-50    : rgba(#{$rgb}, 0.50);
-  --color-#{$name}-60    : rgba(#{$rgb}, 0.60);
-  --color-#{$name}-70    : rgba(#{$rgb}, 0.70);
-  --color-#{$name}-80    : rgba(#{$rgb}, 0.80);
-  --color-#{$name}-90    : rgba(#{$rgb}, 0.90);
+  $rgb : rgbValuesFromHex($color);
+  $lighten : lighten($color, 5%);
+  $darken : darken($color, 5%);
+  --color-#{$name} : #{$color};
+  --color-#{$name}-10 : rgba(#{$rgb}, 0.1);
+  --color-#{$name}-15 : rgba(#{$rgb}, 0.15);
+  --color-#{$name}-20 : rgba(#{$rgb}, 0.20);
+  --color-#{$name}-30 : rgba(#{$rgb}, 0.30);
+  --color-#{$name}-40 : rgba(#{$rgb}, 0.40);
+  --color-#{$name}-50 : rgba(#{$rgb}, 0.50);
+  --color-#{$name}-60 : rgba(#{$rgb}, 0.60);
+  --color-#{$name}-70 : rgba(#{$rgb}, 0.70);
+  --color-#{$name}-80 : rgba(#{$rgb}, 0.80);
+  --color-#{$name}-90 : rgba(#{$rgb}, 0.90);
   --color-#{$name}--light: #{$lighten};
   --color-#{$name}--dark : #{$darken};
 }
@@ -26,6 +26,18 @@
 
 @mixin AddMedia() {
   @content;
+
+  &-xs {
+    @media (min-width:$xs) {
+      @content;
+    }
+  }
+
+  &-sm {
+    @media (min-width:$sm) {
+      @content;
+    }
+  }
 
   &-md {
     @media (min-width:$md) {
@@ -35,6 +47,18 @@
 
   &-lg {
     @media (min-width:$lg) {
+      @content;
+    }
+  }
+
+  &-xl {
+    @media (min-width:$xl) {
+      @content;
+    }
+  }
+
+  &-ul {
+    @media (min-width:$ul) {
       @content;
     }
   }

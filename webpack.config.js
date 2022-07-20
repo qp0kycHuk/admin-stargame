@@ -10,7 +10,10 @@ const htmlWebpackPluginDefaults = {
   inject: 'head'
 }
 
-const pages = ['index.html', 'ui.html', 'auth.html', 'agents.html', 'halls.html', 'admin-agents.html']
+const pages = [
+  'index.html', 'ui.html', 'auth.html', 'agents.html', 'halls.html', 'admin-agents.html',
+  'admin-statistic.html'
+]
 const dialogs = ['dialog-large.html', 'dialog-middle.html', 'dialog-small.html']
 
 module.exports = {
@@ -78,7 +81,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: PUBLIC_PATH,
     compress: false,
     port: 9000,
     historyApiFallback: true,

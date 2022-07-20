@@ -2,117 +2,91 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Суперагенты - Stargame</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Суперагенты - Stargame</title>
 </head>
 
 <body>
-  <div class="root">
-    <%= require('./includes/header.html').default %>
+	<div class="root">
+		<%= require('./includes/header.html').default %>
 
-    <div class="wrapper">
-      <div class="wrapper-inner">
-        <%= require('./includes/sidebar.html').default %>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= require('./includes/sidebar.html').default %>
 
-        <div class="content container">
-          <div class="text-h4 color-primary mb-5">Суперагенты</div>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Суперагенты</div>
 
-          <form class="flex">
-            <label class="form-field field-middle">
-              <div class="text-body-2 text--demibold mb-2">Поиск по номеру телефона или его части</div>
-              <div class="form-input-cover">
-                <input type="text" class="form-input pl-12" placeholder="Введите номер телефона">
-                <div class="form-input-start pl-4">
-                  <svg class="icon text-h6 color-primary">
-                    <use xlink:href="img/icons.svg#phone" />
-                  </svg>
-                </div>
+					<%= require('./includes/search-by-phone.html').default %>
 
-              </div>
-            </label>
-            <button class="btn btn--primary btn--fill ml-2 flex-self-end">Поиск</button>
-          </form>
+					<!-- Мобильный вариант скрыт на (min-width:$md) -->
+					<div class="d-md-none">
+						<div class="mobile-table  mt-5">
+							<% for(let i = 0; i < 5; i++ ){ %>
+							<div class="mobile-table-item agents-mobile-item">
+								<div class="text-small text-xs-body-1 fade-40">#17144</div>
+								<div class="text-small text-xs-body-1 text--underline color-primary">vip3r011za</div>
+								<div class="text-small text-xs-body-1 text--center fade-80">4 800 000,00 ₽</div>
+								<div class="text-small text-xs-body-1 text--center fade-80">ZAR</div>
+								<button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
+									<svg class="icon text-body-0">
+										<use xlink:href="img/icons.svg#settings" />
+									</svg>
+								</button>
+							</div>
+							<% } %>
 
-          <table class="table mt-5">
-            <thead class="table-head">
-              <tr class="table-row">
-                <td class="table-cell text-body-2 text--demibold text--center">ID</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Логин</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Баланс</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Валюта</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Дата и время</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Телефон</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Кол-во залов</td>
-                <td class="table-cell text-body-2 text--demibold text--center">Опции</td>
-              </tr>
-            </thead>
-            <tbody class="table-body">
-              <tr class="table-row">
-                <td class="table-cell text-body-2 text--center">17114</td>
-                <td class="table-cell text-body-2 text--center">vip3r011za</td>
-                <td class="table-cell text-body-2 text--center">4 800 000,00 ₽</td>
-                <td class="table-cell text-body-2 text--center">ZAR</td>
-                <td class="table-cell text-body-2 text--center">2022-05-06  09:41:05</td>
-                <td class="table-cell text-body-2 text--center">+7(132)329-56-11</td>
-                <td class="table-cell text-body-2 text--center">234</td>
-                <td class="table-cell text-body-2 text--center">
-                  <div class="flex flex-align-center flex-justify-center">
-                    Управление
-                    <button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
-                      <svg class="icon text-body-0">
-                        <use xlink:href="img/icons.svg#settings" />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="table-row">
-                <td class="table-cell text-body-2 text--center">17114</td>
-                <td class="table-cell text-body-2 text--center">vip3r011za</td>
-                <td class="table-cell text-body-2 text--center">4 800 000,00 ₽</td>
-                <td class="table-cell text-body-2 text--center">ZAR</td>
-                <td class="table-cell text-body-2 text--center">2022-05-06  09:41:05</td>
-                <td class="table-cell text-body-2 text--center">+7(132)329-56-11</td>
-                <td class="table-cell text-body-2 text--center">234</td>
-                <td class="table-cell text-body-2 text--center">
-                  <div class="flex flex-align-center flex-justify-center">
-                    Управление
-                    <button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
-                      <svg class="icon text-body-0">
-                        <use xlink:href="img/icons.svg#settings" />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="table-row">
-                <td class="table-cell text-body-2 text--center">17114</td>
-                <td class="table-cell text-body-2 text--center">vip3r011za</td>
-                <td class="table-cell text-body-2 text--center">4 800 000,00 ₽</td>
-                <td class="table-cell text-body-2 text--center">ZAR</td>
-                <td class="table-cell text-body-2 text--center">2022-05-06  09:41:05</td>
-                <td class="table-cell text-body-2 text--center">+7(132)329-56-11</td>
-                <td class="table-cell text-body-2 text--center">234</td>
-                <td class="table-cell text-body-2 text--center">
-                  <div class="flex flex-align-center flex-justify-center">
-                    Управление
-                    <button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
-                      <svg class="icon text-body-0">
-                        <use xlink:href="img/icons.svg#settings" />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
 
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<table class="table mt-5">
+							<thead class="table-head">
+								<tr class="table-row">
+									<td class="table-cell text-body-2 text--demibold text--center">ID</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Логин</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Баланс</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Валюта</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Дата и время</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Телефон</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Кол-во залов</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Опции</td>
+								</tr>
+							</thead>
+							<tbody class="table-body">
+								<% for(let i=0; i < 5; i++ ){ %>
+									<tr class="table-row">
+										<td class="table-cell text-body-2 text--center">17114</td>
+										<td class="table-cell text-body-2 text--center">vip3r011za</td>
+										<td class="table-cell text-body-2 text--center">4 800 000,00 ₽</td>
+										<td class="table-cell text-body-2 text--center">ZAR</td>
+										<td class="table-cell text-body-2 text--center">2022-05-06 09:41:05</td>
+										<td class="table-cell text-body-2 text--center">+7(132)329-56-11</td>
+										<td class="table-cell text-body-2 text--center">234</td>
+										<td class="table-cell text-body-2 text--center">
+											<div class="flex flex-align-center flex-justify-center">
+												Управление
+												<button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
+													<svg class="icon text-body-0">
+														<use xlink:href="img/icons.svg#settings" />
+													</svg>
+												</button>
+											</div>
+										</td>
+									</tr>
+								<% } %>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

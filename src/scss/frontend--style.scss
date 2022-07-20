@@ -188,6 +188,9 @@ body {
 	border-bottom: 1px solid var(--color-text-10);
 	padding-left: 0;
 	padding-right: var(--space-right);
+	position: sticky;
+	top: 0;
+	z-index: var(--zi-l2);
 
 	@media(max-width:$lg) {
 		padding-left: var(--space-left);
@@ -199,10 +202,19 @@ body {
 		width: var(--sidebar-width);
 		padding-left: 32px;
 
+		@media(max-width:$md) {
+			margin-left: auto;
+			flex-grow: 1;
+			padding-left: 0;
+		}
 	}
 
 	&-filter {
 		display: flex;
+
+		@media(max-width:$md) {
+			display: none;
+		}
 
 		&-field {
 			width: 240px;
@@ -217,6 +229,7 @@ body {
 }
 
 .sidebar {
+	min-width: var(--sidebar-width);
 	width: var(--sidebar-width);
 	background: var(--bg3);
 	border-radius: var(--radius-middle);
@@ -232,6 +245,9 @@ body {
 		z-index: var(--zi-l5);
 		border-radius: 0;
 		transition: .25s ease;
+		padding-top: 4px;
+		padding-left: 15px;
+		padding-right: 15px;
 
 		&:not(.toggle-active) {
 			transform: translateX(-100%);
@@ -283,11 +299,17 @@ body {
 }
 
 .field-small {
-	width: 188px;
+	@media(min-width:$md) {
+		max-width: 188px;
+		width: 188px;
+	}
 }
 
 .field-middle {
-	width: 310px;
+	@media(min-width:$md) {
+		max-width: 310px;
+		width: 310px;
+	}
 }
 
 .content {
@@ -368,6 +390,10 @@ body {
 	background: var(--color-primary-20);
 	height: 42px;
 
+	@media(max-width:$xl) {
+		display: none;
+	}
+
 	&-sidebar {
 		width: var(--sidebar-width);
 		padding: 5px 30px;
@@ -384,6 +410,52 @@ body {
 
 		&__item {
 			padding: 10px 20px;
+		}
+	}
+}
+
+.mobile-table {
+	border: 1px solid var(--color-text-10);
+	border-radius: 4px;
+
+	&-item {
+		&+& {
+			border-top: 1px solid var(--color-text-10);
+		}
+	}
+}
+
+.agents-mobile {
+	&-item {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 2fr 2fr 4fr 1fr auto;
+		grid-gap: 4px;
+		padding: 20px 15px;
+
+	}
+}
+
+.halls-mobile {
+	&-item {
+		&__head {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 18px 15px;
+			width: 100%;
+		}
+
+		&__content {
+			padding: 15px;
+			border-top: 1px solid var(--color-text-10);
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+			padding: 15px;
+			background: var(--color-primary-15);
 		}
 	}
 }

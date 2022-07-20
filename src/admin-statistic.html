@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Просмотр статистики - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= require('./includes/admin-header.html').default %>
+		<%= require('./includes/header.html').default %>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= require('./includes/sidebar.html').default %>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Просмотр статистики</div>
+
+					<div class="d-md-flex mb-5 flex-wrap">
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Таблица дохода по залам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">График дохода по залам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика по странам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Таблица доходов по играм</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика по валютам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика доходов по депозитам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Pachinko</span>
+						</button>
+					</div>
+
+					<%= require('./includes/search-by-period.html').default %>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
