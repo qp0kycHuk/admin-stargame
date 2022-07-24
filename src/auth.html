@@ -91,24 +91,9 @@
         </button>
 
       </div>
-
-      <label class="language-select auth-page-language-select form-field mt-5">
-        <!-- <div class="text-body-2 mb-2">Выберите язык / Select a language</div> -->
-        <div class="form-input-cover">
-          <select class="form-input pl-13">
-            <option value="">Русский</option>
-            <option value="">Не русский</option>
-          </select>
-          <div class="form-input-start pl-4">
-            <img src="img/language/1.png" alt="" class="icon text-h4">
-          </div>
-          <div class="form-input-end pr-4">
-            <svg class="icon">
-              <use xlink:href="img/icons.svg#to-right" />
-            </svg>
-          </div>
-        </div>
-      </label>
+      <div class="auth-page-language-select">
+        <%= _.template(require('./html-includes/language-select.html').default)() %>
+      </div>
 
       <div class="text-body-2 mt-6">Time: 0.04196596</div>
     </div>

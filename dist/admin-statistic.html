@@ -1,1 +1,450 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Просмотр статистики - Stargame</title><link href="css/style.css" rel="stylesheet"><script src="index.js"></script></head><body><div class="root"><div class="admin-header"><div class="admin-header-sidebar"><div class="text-body-1 text--demibold">Панель администратора</div></div><div class="admin-header-content"><div class="admin-header-nav"><div class="admin-header-nav__item link-hover">Коллекторы</div><div class="admin-header-nav__item link-hover">Депозиты</div><div class="admin-header-nav__item link-hover">Валюты</div><div class="admin-header-nav__item link-hover">Игры</div><div class="admin-header-nav__item link-hover">Сервера</div><div class="admin-header-nav__item link-hover">Кроны</div><div class="admin-header-nav__item link-hover">Логи</div><div class="admin-header-nav__item link-hover">Доход по агентам</div><div class="admin-header-nav__item link-hover">API</div><div class="admin-header-nav__item link-hover">OTP</div><div class="admin-header-nav__item link-hover">Visa</div><div class="admin-header-nav__item link-hover">LiveDealers</div><div class="admin-header-nav__item link-hover">ServerStatus</div></div></div></div><header class="header"><button class="btn btn--primary header-burger btn-icon d-lg-none" data-toggle-link="sidebar"><svg class="icon"><use xlink:href="img/icons.svg#menu"/></svg></button><div class="header-info"><svg class="icon color-primary text-h6 mr-2 ml-auto ml-md-0"><use xlink:href="img/icons.svg#wallet"/></svg><div class="text-body-1 text--medium"><span class="d-none d-xs-inline">Баланс:</span> <span class="text--demibold">743 054, 0 ₽</span></div><button class="btn btn--primary btn--white-bg btn-icon ml-auto"><svg class="icon text-h6"><use xlink:href="img/icons.svg#logout"/></svg></button></div><div class="header-filter ml-auto"><label class="form-field header-filter-field"><div class="form-input-cover"><select class="form-input pl-12"><option value="">Зал</option><option value="">Зал 1</option><option value="">Зал 2</option></select><div class="form-input-start pl-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#regroup"/></svg></div><div class="form-input-end pr-4"><svg class="icon text-small"><use xlink:href="img/icons.svg#to-right"/></svg></div></div></label> <label class="form-field header-filter-field"><div class="form-input-cover"><input class="form-input pl-12" placeholder="Name/ID"><div class="form-input-start pl-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#search"/></svg></div></div></label> <button class="btn btn--primary btn--fill px-5">Поиск</button></div></header><div class="wrapper"><div class="wrapper-inner"><aside class="sidebar" id="sidebar"><div class="flex flex-align-center d-lg-none mb-5"><svg class="icon color-primary text-h6 mr-2"><use xlink:href="img/icons.svg#wallet"/></svg><div class="text-body-1 text--medium">Баланс: <span class="text--demibold">743 054, 0 ₽</span></div><button class="btn btn--primary btn--white-bg btn-icon ml-auto"><svg class="icon text-h6"><use xlink:href="img/icons.svg#logout"/></svg></button></div><button class="btn btn--primary btn--fill w-100 mb-10">Пополнить баланс</button><div class="sidebar-info"><div class="sidebar-info__item"><svg class="icon color-primary text-h4 mr-2"><use xlink:href="img/icons.svg#user"/></svg><div class="text-body-1 text--medium">Логин: <span class="text--demibold">martlet</span></div></div><div class="sidebar-info__item"><svg class="icon color-primary text-h4 mr-2"><use xlink:href="img/icons.svg#message"/></svg><div class="text-body-1 text--medium">Новых сообщений: <span class="text--demibold">54</span></div></div><div class="sidebar-info__item"><svg class="icon color-primary text-h4 mr-2"><use xlink:href="img/icons.svg#shield"/></svg><div class="text-body-1 text--medium">ID: <span class="text--demibold">12922</span></div></div><div class="sidebar-info__item"><svg class="icon color-primary text-h4 mr-2"><use xlink:href="img/icons.svg#check-round"/></svg><div class="text-body-1 text--medium">Status: <span class="text--demibold">Коллектор</span></div></div></div><div class="sidebar-filter my-10"><label class="form-field"><div class="text-body-2 text--medium mb-2">Перейти</div><div class="form-input-cover"><select class="form-input pl-12"><option value="">Зал</option><option value="">Зал 1</option><option value="">Зал 2</option></select><div class="form-input-start pl-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#regroup"/></svg></div><div class="form-input-end pr-4"><svg class="icon text-small"><use xlink:href="img/icons.svg#to-right"/></svg></div></div></label> <label class="form-field mt-4"><div class="text-body-2 text--medium mb-2">Поиск</div><div class="form-input-cover"><input class="form-input pl-12" placeholder="Name/ID"><div class="form-input-start pl-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#search"/></svg></div></div></label></div><div class="sidebar-nav"><div class="text-h6 mb-5">Пользователи</div><button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Суперагенты</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Дилеры</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Агенты</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Инженеры</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Операторы залов</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Компьютеры в залах</span></button><div class="text-h6 mb-5 mt-10">Залы</div><button class="btn btn-large btn--primary btn--fill text--regular w-100 mb-2 px-4 brs-3"><svg class="icon text-h6 mr-2"><use xlink:href="img/icons.svg#circle"/></svg> <span class="mr-auto">Текущие залы</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Удаленные залы</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Детализация по сменам</span></button> <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover"><span class="mr-auto">Поиск зала по IP</span></button></div><label class="form-field form-checkbox mt-8 theme-toggle"><input type="checkbox" class="form-input-checkbox -theme-changer-"><div class="text-body-2 mr-4">Тема интерфейса</div><div class="form-toggle-target px-1"><svg class="icon color-primary"><use xlink:href="img/icons.svg#sun"/></svg> <svg class="icon color-text ml-auto fade-80"><use xlink:href="img/icons.svg#moon"/></svg></div></label> <label class="language-select form-field mt-5"><div class="text-body-2 mb-2">Выберите язык / Select a language</div><div class="form-input-cover"><select class="form-input pl-13"><option value="">Русский</option><option value="">Не русский</option></select><div class="form-input-start pl-4"><img src="img/language/1.png" alt="" class="icon text-h4"></div><div class="form-input-end pr-4"><svg class="icon"><use xlink:href="img/icons.svg#to-right"/></svg></div></div></label></aside><div class="sidebar-shadow"></div><div class="content container"><div class="text-h6 text-md-h4 color-primary mb-5">Просмотр статистики</div><div class="d-md-flex mb-5 flex-wrap"><button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Таблица дохода по залам</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">График дохода по залам</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Статистика по странам</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Таблица доходов по играм</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Статистика по валютам</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Статистика доходов по депозитам</span></button> <button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5"><span class="text-body-2 text-md-body-1 text--demibold">Pachinko</span></button></div><div class="text-body-1 text--bold mb-2">Выберите период</div><form action="" class="flex mb-5"><label class="form-field field-small mr-5 flex-grow"><div class="text-body-2 mb-2">Начало</div><div class="form-input-cover"><input class="form-input pr-12 text-small text-xs-body-1" data-datepicker placeholder="15 апреля 2022"><div class="form-input-end pr-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#calendar"/></svg></div></div></label> <label class="form-field field-small mr-md-5 flex-grow"><div class="text-body-2 mb-2">Конец</div><div class="form-input-cover"><input class="form-input pr-12 text-small text-xs-body-1" data-datepicker placeholder="20 апреля 2022"><div class="form-input-end pr-4"><svg class="icon text-h6 color-primary"><use xlink:href="img/icons.svg#calendar"/></svg></div></div></label> <button class="btn btn--primary btn--fill flex-self-end px-md-10 d-none d-md-flex">Показать</button></form></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Просмотр статистики - Stargame</title>
+<link href="css/style.css" rel="stylesheet"><script src="index.js"></script></head>
+
+<body>
+	<div class="root">
+		
+		<div class="admin-header">
+  <div class="admin-header-sidebar">
+    <div class="text-body-1 text--demibold">Панель администратора</div>
+  </div>
+  <div class="admin-header-content">
+    <div class="admin-header-nav">
+      <div class="admin-header-nav__item link-hover">Коллекторы</div>
+      <div class="admin-header-nav__item link-hover">Депозиты</div>
+      <div class="admin-header-nav__item link-hover">Валюты</div>
+      <div class="admin-header-nav__item link-hover">Игры</div>
+      <div class="admin-header-nav__item link-hover">Сервера</div>
+      <div class="admin-header-nav__item link-hover">Кроны</div>
+      <div class="admin-header-nav__item link-hover">Логи</div>
+      <div class="admin-header-nav__item link-hover">Доход по агентам</div>
+      <div class="admin-header-nav__item link-hover">API</div>
+      <div class="admin-header-nav__item link-hover">OTP</div>
+      <div class="admin-header-nav__item link-hover">Visa</div>
+      <div class="admin-header-nav__item link-hover">LiveDealers</div>
+      <div class="admin-header-nav__item link-hover">ServerStatus</div>
+    </div>
+  </div>
+</div>
+		<header class="header">
+  <button class="btn btn--primary header-burger btn-icon d-lg-none" data-toggle-link="sidebar">
+    <svg class="icon">
+      <use xlink:href="img/icons.svg#menu" />
+    </svg>
+  </button>
+  <div class="header-info">
+    <svg class="icon color-primary text-h6 mr-2 ml-auto ml-md-0">
+      <use xlink:href="img/icons.svg#wallet" />
+    </svg>
+    <div class="text-body-1 text--medium"><span class="d-none d-xs-inline">Баланс:</span> <span class="text--demibold">743 054, 0 ₽</span></div>
+
+    <button class="btn btn--primary btn--white-bg btn-icon ml-auto">
+      <svg class="icon text-h6">
+        <use xlink:href="img/icons.svg#logout" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="header-filter ml-auto">
+    <label class="form-field header-filter-field">
+      <div class="form-input-cover">
+        <select class="form-input pl-12">
+          <option value="">Зал</option>
+          <option value="">Зал 1</option>
+          <option value="">Зал 2</option>
+        </select>
+        <div class="form-input-start pl-4">
+          <svg class="icon text-h6 color-primary">
+            <use xlink:href="img/icons.svg#regroup" />
+          </svg>
+        </div>
+        <div class="form-input-end pr-4">
+          <svg class="icon text-small">
+            <use xlink:href="img/icons.svg#to-right" />
+          </svg>
+        </div>
+      </div>
+    </label>
+    <label class="form-field header-filter-field">
+      <div class="form-input-cover">
+        <input type="text" class="form-input pl-12" placeholder="Name/ID">
+        <div class="form-input-start pl-4">
+          <svg class="icon text-h6 color-primary">
+            <use xlink:href="img/icons.svg#search" />
+          </svg>
+        </div>
+
+      </div>
+    </label>
+    <button class="btn btn--primary btn--fill px-5">Поиск</button>
+  </div>
+</header>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<aside class="sidebar" id="sidebar">
+  <div class="flex flex-align-center d-lg-none mb-5">
+    <svg class="icon color-primary text-h6 mr-2">
+      <use xlink:href="img/icons.svg#wallet" />
+    </svg>
+    <div class="text-body-1 text--medium">Баланс: <span class="text--demibold">743 054, 0 ₽</span></div>
+
+    <button class="btn btn--primary btn--white-bg btn-icon ml-auto">
+      <svg class="icon text-h6">
+        <use xlink:href="img/icons.svg#logout" />
+      </svg>
+    </button>
+  </div>
+  <button class="btn btn--primary btn--fill w-100 mb-10">Пополнить баланс</button>
+
+  <div class="sidebar-info">
+    <div class="sidebar-info__item">
+      <svg class="icon color-primary text-h4 mr-2">
+        <use xlink:href="img/icons.svg#user" />
+      </svg>
+      <div class="text-body-1 text--medium">Логин: <span class="text--demibold">martlet</span></div>
+    </div>
+    <div class="sidebar-info__item">
+      <svg class="icon color-primary text-h4 mr-2">
+        <use xlink:href="img/icons.svg#message" />
+      </svg>
+      <div class="text-body-1 text--medium">Новых сообщений: <span class="text--demibold">54</span></div>
+    </div>
+    <div class="sidebar-info__item">
+      <svg class="icon color-primary text-h4 mr-2">
+        <use xlink:href="img/icons.svg#shield" />
+      </svg>
+      <div class="text-body-1 text--medium">ID: <span class="text--demibold">12922</span></div>
+    </div>
+    <div class="sidebar-info__item">
+      <svg class="icon color-primary text-h4 mr-2">
+        <use xlink:href="img/icons.svg#check-round" />
+      </svg>
+      <div class="text-body-1 text--medium">Status: <span class="text--demibold">Коллектор</span></div>
+    </div>
+  </div>
+
+  <div class="sidebar-filter my-10">
+    <label class="form-field">
+      <div class="text-body-2 text--medium mb-2">Перейти</div>
+      <div class="form-input-cover">
+        <select class="form-input pl-12">
+          <option value="">Зал</option>
+          <option value="">Зал 1</option>
+          <option value="">Зал 2</option>
+        </select>
+        <div class="form-input-start pl-4">
+          <svg class="icon text-h6 color-primary">
+            <use xlink:href="img/icons.svg#regroup" />
+          </svg>
+        </div>
+        <div class="form-input-end pr-4">
+          <svg class="icon text-small">
+            <use xlink:href="img/icons.svg#to-right" />
+          </svg>
+        </div>
+      </div>
+    </label>
+    <label class="form-field mt-4">
+      <div class="text-body-2 text--medium mb-2">Поиск</div>
+      <div class="form-input-cover">
+        <input type="text" class="form-input pl-12" placeholder="Name/ID">
+        <div class="form-input-start pl-4">
+          <svg class="icon text-h6 color-primary">
+            <use xlink:href="img/icons.svg#search" />
+          </svg>
+        </div>
+
+      </div>
+    </label>
+  </div>
+
+  <div class="sidebar-nav">
+    <div class="text-h6 mb-5">Пользователи</div>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Суперагенты</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Дилеры</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Агенты</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Инженеры</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Операторы залов</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Компьютеры в залах</span>
+    </button>
+
+    <div class="text-h6 mb-5 mt-10">Залы</div>
+    <button class="btn btn-large btn--primary btn--fill text--regular w-100 mb-2 px-4 brs-3">
+      <svg class="icon text-h6 mr-2">
+        <use xlink:href="img/icons.svg#circle" />
+      </svg>
+      <span class="mr-auto">Текущие залы</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Удаленные залы</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Детализация по сменам</span>
+    </button>
+    <button class="btn btn--primary btn--link text--regular color-text w-100 py-2 link-hover">
+      <span class="mr-auto">Поиск зала по IP</span>
+    </button>
+    
+  </div>
+
+  <label class="form-field form-checkbox mt-8 theme-toggle">
+    <input type="checkbox" class="form-input-checkbox -theme-changer-">
+    <div class="text-body-2 mr-4"> Тема интерфейса</div>
+    <div class="form-toggle-target px-1">
+      <svg class="icon color-primary">
+        <use xlink:href="img/icons.svg#sun" />
+      </svg>
+      <svg class="icon color-text ml-auto fade-80">
+        <use xlink:href="img/icons.svg#moon" />
+      </svg>
+    </div>
+  </label>
+
+  <label class="language-select form-field mt-5">
+    <div class="form-input-cover">
+      <select class="form-input pl-13">
+        <option value="">Русский</option>
+        <option value="">Не русский</option>
+      </select>
+      <div class="form-input-start pl-4 pe-none">
+        <img src="img/language/1.png" alt="" class="icon text-h4">
+      </div>
+      <div class="form-input-end pr-4 pe-none">
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </div>
+    </div>
+  </label>
+
+</aside>
+<div class="sidebar-shadow"></div>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Просмотр статистики</div>
+
+					<div class="d-md-flex mb-5 flex-wrap">
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Таблица дохода по залам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">График дохода по залам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика по странам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Таблица доходов по играм</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика по валютам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Статистика доходов по депозитам</span>
+						</button>
+						<button class="btn btn--primary bg-l3 color-text px-8 mr-md-5 w-100 w-md-auto mt-2 mt-md-0 mb-md-5">
+							<span class="text-body-2 text-md-body-1 text--demibold">Pachinko</span>
+						</button>
+					</div>
+
+					<div class="text-body-1 text--bold mb-2">Выберите период</div>
+<form action="" class="flex mb-5">
+  <label class="form-field field-xsmall mr-5 flex-grow">
+    <div class="text-body-2 mb-2">Начало</div>
+    <div class="form-input-cover">
+      <input type="text" class="form-input pr-12 text-small text-xs-body-1" data-datepicker placeholder="15 апреля 2022">
+      <div class="form-input-end pr-4">
+        <svg class="icon text-h6 color-primary">
+          <use xlink:href="img/icons.svg#calendar" />
+        </svg>
+      </div>
+
+    </div>
+  </label>
+  <label class="form-field field-xsmall mr-md-5 flex-grow">
+    <div class="text-body-2 mb-2">Конец</div>
+    <div class="form-input-cover">
+      <input type="text" class="form-input pr-12 text-small text-xs-body-1" data-datepicker placeholder="20 апреля 2022">
+      <div class="form-input-end pr-4">
+        <svg class="icon text-h6 color-primary">
+          <use xlink:href="img/icons.svg#calendar" />
+        </svg>
+      </div>
+
+    </div>
+  </label>
+  <button class="btn btn--primary btn--fill flex-self-end px-md-10 d-none d-md-flex">Показать</button>
+</form>
+
+
+					<div class="grid grid-spacing-lg-10">
+						<div class="grid-col-sm-4">
+							<div class="text-body-1 text--bold mb-2">Суперагенты</div>
+							<div class="card py-1 pr-1">
+								<div class="scroll-box scroll-box-small ">
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="grid-col-sm-4">
+							<div class="text-body-1 text--bold mb-2">Агенты</div>
+							<div class="card py-1 pr-1">
+								<div class="scroll-box scroll-box-small ">
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="grid-col-sm-4">
+							<div class="text-body-1 text--bold mb-2">Залы</div>
+							<div class="card py-1 pr-1">
+								<div class="scroll-box scroll-box-small ">
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">adminstar</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">albert888</div>
+									<div class="text-body-2 px-3 py-1 w-100 link-hover">qpokycHuk</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

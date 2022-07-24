@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Логи игр - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Логи игр</div>
+
+					<div class="mb-10">
+						<%= _.template(require('./html-includes/breadcrumbs.html').default)() %>
+					</div>
+					<div class="mb-5">
+						<%= _.template(require('./html-includes/pagination.html').default)() %>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<table class="table">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="py-4 px-6">
+											<div class="text-body-1 text--bold text--italic">
+												*для получения детальной статитистики нажмите на номер или баланс в записи
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row table-head">
+									<td class="table-cell text-body-2 text--demibold text--center">№</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Время</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Игра</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Credit bet</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Money bet</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Credit win</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Money win</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Money</td>
+								</tr>
+								<% for(let i=0; i < 5; i++ ){ %>
+									<tr class="table-row">
+										<td class="table-cell text-body-2 text--center text--demibold">#28268399397</td>
+										<td class="table-cell text-body-2 text--center text--demibold">15:07:32 15-06-2022</td>
+										<td class="table-cell text-body-2 text--center">safariheat</td>
+										<td class="table-cell text-body-2 text--center">20</td>
+										<td class="table-cell text-body-2 text--center">0.20</td>
+										<td class="table-cell text-body-2 text--center">0</td>
+										<td class="table-cell text-body-2 text--center">0.00</td>
+										<td class="table-cell text-body-2 text--center text--demibold">0.00</td>
+									</tr>
+								<% } %>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

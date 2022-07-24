@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "serve": "webpack serve --mode development"
+    "serve": "webpack serve --mode development --stats-children"
   },
   "author": "qpokychuk <serega990112@mail.ru>",
   "license": "ISC",

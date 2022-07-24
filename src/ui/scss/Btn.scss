@@ -201,6 +201,10 @@
 		}
 	}
 
+	&--underline{
+		border-bottom: 1px solid currentColor;
+	}
+
 	&--white-bg {
 		background: var(--bg3);
 		// box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);

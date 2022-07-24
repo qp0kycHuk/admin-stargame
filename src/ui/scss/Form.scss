@@ -9,6 +9,15 @@
 		position: relative;
 		--error-color: var(--color-red);
 		--field-color: var(--color-primary);
+		--size: 42px;
+
+		&-small {
+			--size: 36px
+		}
+	}
+
+	&-field-small &-input {
+		font-size: 14px;
 	}
 
 	&-helper {
@@ -32,7 +41,8 @@
 	&-input {
 		outline: none !important;
 		display: flex;
-		height: 42px;
+
+		height: var(--size);
 		position: relative;
 		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
 		flex-grow: 1;
@@ -93,7 +103,7 @@
 			pointer-events: none;
 		}
 
-		&-large{
+		&-large {
 			height: 52px;
 			border-radius: var(--radius-middle);
 		}
@@ -157,12 +167,13 @@
 		height: 0;
 		overflow: hidden;
 		padding: calc(var(--spacing) * 2);
-
+		visibility: hidden;
 		background: none;
 		border: none;
 		outline: none;
 		box-shadow: none;
 		z-index: -1;
+		appearance: none;
 	}
 
 	&-toggle-target {
@@ -212,21 +223,21 @@
 
 	&-checkbox-target {
 		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
-		background: var(--bg3);
+		// background: var(--bg3);
 		border: 1px solid var(--color-text-40);
 		border-radius: 4px;
 		background-position: center;
 		display: block;
-		min-width: 18px;
-		width: 18px;
-		height: 18px;
+		min-width: 22px;
+		width: 22px;
+		height: 22px;
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
 		.icon {
-			font-size: 12px;
+			font-size: 14px;
 			color: transparent;
 			pointer-events: none;
 			transition: .2s ease;
@@ -240,9 +251,11 @@
 
 	&-input-checkbox:checked~&-checkbox-target {
 		animation: check .3s forwards;
+		background: var(--color-primary);
+		border-color: var(--color-primary);
 
 		.icon {
-			color: var(--color-primary);
+			color: #fff;
 			transform: scale(1);
 		}
 	}
@@ -252,9 +265,9 @@
 		background: var(--bg3);
 		border: 1px solid var(--color-text-40);
 		background-position: center;
-		min-width: 18px;
-		width: 18px;
-		height: 18px;
+		min-width: 20px;
+		width: 20px;
+		height: 20px;
 		border-radius: 50%;
 
 

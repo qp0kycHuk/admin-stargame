@@ -10,12 +10,12 @@
 
 <body>
 	<div class="root">
-		<%= require('./includes/admin-header.html').default %>
-		<%= require('./includes/header.html').default %>
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
 
 		<div class="wrapper">
 			<div class="wrapper-inner">
-				<%= require('./includes/sidebar.html').default %>
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
 
 				<div class="content container">
 					<div class="text-h6 text-md-h4 color-primary mb-5">Суперагенты</div>
@@ -29,7 +29,7 @@
 						</button>
 					</div>
 
-					<%= require('./includes/search-by-phone.html').default %>
+					<%= _.template(require('./html-includes/search-by-phone.html').default)() %>
 
 					<!-- Мобильный вариант скрыт на (min-width:$md) -->
 					<div class="d-md-none">

@@ -10,17 +10,17 @@
 
 <body>
 	<div class="root">
-		<%= require('./includes/header.html').default %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
 
 		<div class="wrapper">
 			<div class="wrapper-inner">
-				<%= require('./includes/sidebar.html').default %>
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
 
 				<div class="content container">
 					<div class="text-h6 text-md-h4 color-primary mb-5">Текущие залы</div>
 
-					<%= require('./includes/tabs-by-period.html').default %>
-					<%= require('./includes/search-by-period.html').default %>
+					<%= _.template(require('./html-includes/tabs-by-period.html').default)() %>
+					<%= _.template(require('./html-includes/search-by-period.html').default)() %>
 
 					<button class="btn btn--link btn--primary text--demibold ">
 						<span class="color-text">Сортировать:</span>

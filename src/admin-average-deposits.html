@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Средние депозиты по залам - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Средние депозиты по залам</div>
+
+
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<table class="table mt-5">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="py-4">
+											<div class="text-body-1 text--bold text--center">Лимиты по средним депозитам</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row table-head">
+									<td class="table-cell text-body-2 text--demibold text--center">Код валюты</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Название</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Курс к USD</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Минимальная норма</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Максимальная норма</td>
+								</tr>
+								<% for(let i=0; i < 5; i++ ){ %>
+								<tr class="table-row">
+									<td class="table-cell text-body-2 text--center">8</td>
+									<td class="table-cell text-body-2 text--center">ALL</td>
+									<td class="table-cell text-body-2 text--center">114.62</td>
+									<td class="table-cell text-body-2 text--center w-33">
+										<label class="form-field px-2">
+											<div class="form-input-cover">
+												<input type="text" class="form-input" value="1 000 000">
+											</div>
+										</label>
+									</td>
+									<td class="table-cell text-body-2 text--center w-33">
+										<label class="form-field px-2">
+											<div class="form-input-cover">
+												<input type="text" class="form-input" value="6 000 000">
+											</div>
+										</label>
+									</td>
+								</tr>
+								<% } %>
+
+							</tbody>
+						</table>
+					</div>
+
+					<div class="flex flex-justify-center mt-5">
+						<button class="btn btn--primary btn--fill">Сохранить</button>
+						<button class="btn btn--primary btn--fill ml-3">Сгенерировать отчет</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

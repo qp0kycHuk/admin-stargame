@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Детализация запросов АПИ - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Детализация запросов АПИ</div>
+
+					<div class="flex mb-7">
+						<div>
+							<div class="text--bold text-body-1 mb-4">Поиск</div>
+							<div class="flex">
+								<label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-radio-target"> </div>
+									<div class="text-body-2 ml-1 fade-80"> Тикет </div>
+								</label>
+								<label class="form-field form-checkbox ml-4">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-radio-target"> </div>
+									<div class="text-body-2 ml-1 fade-80"> Operation_id </div>
+								</label>
+								<label class="form-field form-checkbox ml-4">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-radio-target"> </div>
+									<div class="text-body-2 ml-1 fade-80"> System_id </div>
+								</label>
+								<label class="form-field form-checkbox ml-4">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-radio-target"> </div>
+									<div class="text-body-2 ml-1 fade-80"> Терминал </div>
+								</label>
+								<label class="form-field form-checkbox ml-4">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-radio-target"> </div>
+									<div class="text-body-2 ml-1 fade-80"> Зал </div>
+								</label>
+							</div>
+						</div>
+
+						<form class="ml-auto">
+							<div class="flex w-100 w-md-auto">
+								<label class="form-field field-small flex-grow">
+									<div class="form-input-cover">
+										<input type="text" class="form-input pl-12 text-small text-xs-body-1">
+										<div class="form-input-start pl-4">
+											<svg class="icon text-h6 color-primary">
+												<use xlink:href="img/icons.svg#search" />
+											</svg>
+										</div>
+									</div>
+								</label>
+								<button class="btn btn--primary btn--fill ml-2 flex-self-end px-4 px-xs-5" type="submit">
+									<span class="text-small text-xs-body-1 text--demibold">Поиск</span>
+								</button>
+								<button class="btn btn--primary btn--contur ml-2 flex-self-end px-4 px-xs-5" type="reset">
+									<span class="text-small text-xs-body-1 text--demibold">Сбросить</span>
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="text--bold mb-3">Всего (34789054)</div>
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<table class="table">
+							<thead class="table-head">
+								<tr class="table-row">
+									<td class="table-cell text-body-2 text--demibold text--center">Systemid</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Time</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Operationid</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Type</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Ticket</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Hallid</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Userid</td>
+								</tr>
+							</thead>
+							<tbody class="table-body">
+								<% for(let i=0; i < 5; i++ ){ %>
+									<tr class="table-row">
+										<td class="table-cell text-body-2 text--center text--underline">23596911</td>
+										<td class="table-cell text-body-2 text--center">10:06 16-06-2022</td>
+										<td class="table-cell text-body-2 text--center text--underline">12574927521663278</td>
+										<td class="table-cell text-body-2 text--center">Смена баланса</td>
+										<td class="table-cell text-body-2 text--center text--underline">481672303</td>
+										<td class="table-cell text-body-2 text--center">8566</td>
+										<td class="table-cell text-body-2 text--center">856643</td>
+									</tr>
+								<% } %>
+
+							</tbody>
+						</table>
+					</div>
+
+					<div class="mt-5">
+						<%= _.template(require('./html-includes/pagination.html').default)() %>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

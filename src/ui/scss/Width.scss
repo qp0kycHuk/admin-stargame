@@ -1,12 +1,25 @@
 // out:false
 @mixin Width {
-  &-100 {
-    width: 100%;
+  &-25 {
+    width: 25%;
+  }
+
+  &-33 {
+    width: calc(100% / 3);
   }
 
   &-50 {
     width: 50%;
   }
+
+  &-75 {
+    width: 75%;
+  }
+
+  &-100 {
+    width: 100%;
+  }
+
 
   &-auto {
     width: auto !important;
@@ -14,8 +27,8 @@
 }
 
 .w {
-	@include AddMedia {
-		@include Width;
-	}
+  @include AddMedia {
+    @include Width;
+  }
 
 }

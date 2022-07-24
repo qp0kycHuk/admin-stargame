@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Курсы и языки - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Курсы и языки</div>
+
+
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<table class="table">
+							<thead class="table-head">
+								<tr class="table-row">
+									<td class="table-cell text-body-2 text--demibold text--center">Код валюты</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Обозначение</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Курс к рублю</td>
+									<td class="table-cell text-body-2 text--demibold text--center" colspan="2">Фикс. деноминация</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Копейки</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Платежи онлайн</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Язык</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Сохранить</td>
+								</tr>
+							</thead>
+							<tbody class="table-body">
+								<% for(let i=0; i < 5; i++ ){ %>
+									<tr class="table-row">
+										<td class="table-cell text-body-2 text--center">8</td>
+										<td class="table-cell text-body-2 text--center">ALL</td>
+										<td class="table-cell text-body-2 text--center">0.34672789054214</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-field-small form-select">
+												<div class="form-input-cover">
+													<select class="form-input px-3">
+														<option value="1"> 1.00</option>
+														<option value="2"> 2.00</option>
+													</select>
+													<div class="form-input-end pr-3 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-field-small form-select">
+												<div class="form-input-cover">
+													<select class="form-input px-3">
+														<option value="English"> English</option>
+														<option value="German"> German</option>
+														<option value="Russian"> Russian</option>
+													</select>
+													<div class="form-input-end pr-3 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<div class="flex flex-align-center flex-justify-center">
+												Сохранить
+												<button class="btn btn--primary btn--white-bg btn-icon btn-xsmall ml-2">
+													<svg class="icon text-body-0">
+														<use xlink:href="img/icons.svg#save" />
+													</svg>
+												</button>
+											</div>
+										</td>
+									</tr>
+								<% } %>
+
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
