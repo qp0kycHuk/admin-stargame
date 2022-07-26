@@ -37,7 +37,7 @@
 						<div class="mobile-table  mt-5">
 							<div class="mobile-table-item halls-mobile-item" data-toggle-cover>
 								<button class="halls-mobile-item__head btn btn--link btn--primary" data-toggle-link>
-									<div class="text--demibold text--underline color-text">kapitan_ks [martlet]</div>
+									<div class="text--demibold text-body-2 text--underline color-text">kapitan_ks [martlet]</div>
 								</button>
 								<div data-toggle-content data-toggle-height="true" data-toggle-static="true">
 									<% for(let i = 0; i < 3; i++ ){ %>
@@ -149,6 +149,28 @@
 						</table>
 						<% } %>
 					</div>
+
+					<form action="" class="mt-10">
+						<div class="text-body-1 text-md-subtitle-1 text--demibold mb-1">Добавить зал</div>
+						<div class="text-body-2 mb-3 fade-60">
+							ID назначается автоматически. По умолчанию создание операторов зала запрещено, администратор может включить эту функцию
+						</div>
+						<div class="flex">
+							<label class="form-field header-filter-field">
+								<div class="text-body-2 text-md-body-1 mb-1">Название зала</div>
+								<div class="form-input-cover">
+									<input type="text" class="form-input">
+								</div>
+							</label>
+							<label class="form-field header-filter-field">
+								<div class="text-body-2 text-md-body-1 mb-1">Начальная сумма</div>
+								<div class="form-input-cover">
+									<input type="text" class="form-input">
+								</div>
+							</label>
+							<button class="btn btn--primary btn--fill px-5 flex-self-end">Добавить</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

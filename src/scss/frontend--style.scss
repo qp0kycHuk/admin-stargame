@@ -5,8 +5,9 @@
 
 
 :root {
-	@include getColors(#14A9F6, "primary");
-	@include getColors(#CE9B44, "sec");
+	// @include getColors(#14A9F6, "primary");
+	@include getColors(#1289A7, "primary");
+	@include getColors(#EA2027, "sec");
 	@include getColors(#246EDD, "blue");
 	@include getColors(#FF9820, "yellow");
 	@include getColors(#31A043, "green");
@@ -321,6 +322,7 @@ body {
 
 .content {
 	flex-grow: 1;
+	padding-bottom: 80px;
 }
 
 .table {

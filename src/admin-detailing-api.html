@@ -19,31 +19,31 @@
 				<div class="content container">
 					<div class="text-h6 text-md-h4 color-primary mb-5">Детализация запросов АПИ</div>
 
-					<div class="flex mb-7">
-						<div>
+					<div class="d-md-flex mb-7">
+						<div class="mb-2 mb-md-0">
 							<div class="text--bold text-body-1 mb-4">Поиск</div>
-							<div class="flex">
-								<label class="form-field form-checkbox">
+							<div class="flex flex-wrap">
+								<label class="form-field form-checkbox mr-4 mb-3 mb-md-0">
 									<input type="checkbox" class="form-input-checkbox">
 									<div class="form-radio-target"> </div>
 									<div class="text-body-2 ml-1 fade-80"> Тикет </div>
 								</label>
-								<label class="form-field form-checkbox ml-4">
+								<label class="form-field form-checkbox mr-4 mb-3 mb-md-0">
 									<input type="checkbox" class="form-input-checkbox">
 									<div class="form-radio-target"> </div>
 									<div class="text-body-2 ml-1 fade-80"> Operation_id </div>
 								</label>
-								<label class="form-field form-checkbox ml-4">
+								<label class="form-field form-checkbox mr-4 mb-3 mb-md-0">
 									<input type="checkbox" class="form-input-checkbox">
 									<div class="form-radio-target"> </div>
 									<div class="text-body-2 ml-1 fade-80"> System_id </div>
 								</label>
-								<label class="form-field form-checkbox ml-4">
+								<label class="form-field form-checkbox mr-4 mb-3 mb-md-0">
 									<input type="checkbox" class="form-input-checkbox">
 									<div class="form-radio-target"> </div>
 									<div class="text-body-2 ml-1 fade-80"> Терминал </div>
 								</label>
-								<label class="form-field form-checkbox ml-4">
+								<label class="form-field form-checkbox mr-4 mb-3 mb-md-0">
 									<input type="checkbox" class="form-input-checkbox">
 									<div class="form-radio-target"> </div>
 									<div class="text-body-2 ml-1 fade-80"> Зал </div>
@@ -52,7 +52,7 @@
 						</div>
 
 						<form class="ml-auto">
-							<div class="flex w-100 w-md-auto">
+							<div class="d-xs-flex w-100 w-md-auto">
 								<label class="form-field field-small flex-grow">
 									<div class="form-input-cover">
 										<input type="text" class="form-input pl-12 text-small text-xs-body-1">
@@ -63,12 +63,14 @@
 										</div>
 									</div>
 								</label>
-								<button class="btn btn--primary btn--fill ml-2 flex-self-end px-4 px-xs-5" type="submit">
-									<span class="text-small text-xs-body-1 text--demibold">Поиск</span>
-								</button>
-								<button class="btn btn--primary btn--contur ml-2 flex-self-end px-4 px-xs-5" type="reset">
-									<span class="text-small text-xs-body-1 text--demibold">Сбросить</span>
-								</button>
+								<div class="flex mt-3 mt-xs-0">
+									<button class="btn btn--primary btn--fill ml-xs-2 flex-self-end px-4 px-xs-5 flex-grow" type="submit">
+										<span class="text-body-2 text-xs-body-1 text--demibold">Искать</span>
+									</button>
+									<button class="btn btn--primary btn--contur ml-2 flex-self-end px-4 px-xs-5 flex-grow" type="reset">
+										<span class="text-body-2 text-xs-body-1 text--demibold">Сбросить</span>
+									</button>
+								</div>
 							</div>
 						</form>
 					</div>
