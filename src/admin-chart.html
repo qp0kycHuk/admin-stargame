@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Графики - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Графики</div>
+
+					<%= _.template(require('./html-includes/tabs-by-period.html').default)() %>
+
+					<table class="table">
+						<tbody class="table-body">
+							<tr class="table-row">
+								<td class="table-cell table-cell--mark text-body-2 text--center text--demibold"><div class="px-3"> 10.2.2.34 </div></td>
+								<td class="table-cell text-body-2 w-100"><div class="fade-80 pl-6"> 27 hours 50 min 47 sec online </div></td>
+							</tr>
+							<tr class="table-row">
+								<td class="table-cell table-cell--mark text-body-2 text--center text--demibold"><div class="px-3"> live</div></td>
+								<td class="table-cell text-body-2 w-100"><div class="fade-80 pl-6"> 0 hours 0 min 0 sec online </div></td>
+							</tr>
+							<tr class="table-row">
+								<td class="table-cell table-cell--mark text-body-2 text--center text--demibold"><div class="px-3"> 10.2.2.34 </div></td>
+								<td class="table-cell text-body-2 w-100"><div class="fade-80 pl-6"> 27 hours 50 min 47 sec online </div></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="chart card mt-5">
+						<div class="chart-header">
+							<div class="text--demibold">Memory</div>
+							<div class="chart-lines">
+								<label class="chart-line form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka" />
+										</svg>
+									</div>
+									<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
+									<div class="text-small ml-1"> 10.2.2.32 </div>
+								</label>
+								<label class="chart-line form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka" />
+										</svg>
+									</div>
+									<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
+									<div class="text-small ml-1"> 10.2.2.34 </div>
+								</label>
+							
+							</div>
+						</div>
+						<div class="chart-content">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
