@@ -90,8 +90,8 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "css/style.css", }),
     ...generateHtmlPlugins('./src'),
+    new MiniCssExtractPlugin({ filename: "css/style.css", }),
     new CopyPlugin({
       patterns: [
         { from: "./src/img/", to: "./img/" },

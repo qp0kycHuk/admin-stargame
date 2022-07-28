@@ -21,23 +21,33 @@
 
 					<%= _.template(require('./html-includes/tabs-by-period.html').default)() %>
 					<%= _.template(require('./html-includes/search-by-period.html').default)() %>
+					<div class="d-md-none">
+						<%= _.template(require('./html-includes/search-by-name.html').default)() %>
+					</div>
 
-					<button class="btn btn--link btn--primary text--demibold ">
-						<span class="color-text">Сортировать:</span>
+					<div class="d-none d-md-block">
 
-						<span class="color-primary"> по залу </span>
-						<svg class="icon color-primary text-small ml-1">
-							<use xlink:href="img/icons.svg#triangle-down" />
-						</svg>
-					</button>
+						<button class="btn btn--link btn--primary text--demibold ">
+							<span class="color-text">Сортировать:</span>
+							
+							<span class="color-primary"> по залу </span>
+							<svg class="icon color-primary text-small ml-1">
+								<use xlink:href="img/icons.svg#triangle-down" />
+							</svg>
+						</button>
+					</div>
 
 					<!-- Мобильный вариант скрыт на (min-width:$md) -->
 					<div class="d-md-none">
-						<% for(let i = 0; i < 5; i++ ){ %>
+						<% for(let i = 0; i < 2; i++ ){ %>
 						<div class="mobile-table  mt-5">
 							<div class="mobile-table-item halls-mobile-item" data-toggle-cover>
 								<button class="halls-mobile-item__head btn btn--link btn--primary" data-toggle-link>
 									<div class="text--demibold text-body-2 text--underline color-text">kapitan_ks [martlet]</div>
+									<div class="btn btn--primary btn--fill ml-auto">
+										<span class="active-disabled text-small text--demibold">Раскрыть таблицу</span>
+										<span class="active-enabled text-small text--demibold">Скрыть таблицу</span>
+									</div>
 								</button>
 								<div data-toggle-content data-toggle-height="true" data-toggle-static="true">
 									<% for(let i = 0; i < 3; i++ ){ %>
@@ -58,28 +68,28 @@
 													<span class="text--underline">4 800 000,00 ₽</span>
 												</div>
 											</div>
-											<div class="grid-col-4 grid-col-xs-5">
+											<div class="grid-col-5">
 												<div class="text-small text-xs-body-2 fade-80">
 													<span class="text--demibold">Компьютер:</span>
 													<span class="text--underline">1</span>
 												</div>
 											</div>
-											<div class="grid-col-2">
-												<div class="text-small text-xs-body-2 fade-80">
-													<span class="text--demibold">In:</span>
-													<span class="text--underline">0,00</span>
-												</div>
-											</div>
-											<div class="grid-col-3 grid-col-xs-2">
-												<div class="text-small text-xs-body-2 fade-80">
-													<span class="text--demibold">Out:</span>
-													<span class="text--underline">0,00</span>
-												</div>
-											</div>
-											<div class="grid-col-3">
-												<div class="text-small text-xs-body-2 fade-80">
-													<span class="text--demibold">Profit:</span>
-													<span class="text--underline">0,00</span>
+											
+											<div class="grid-col-7">
+												<div class="flex">
+													<div class="text-small text-xs-body-2 fade-80">
+														<span class="text--demibold">In:</span>
+														<span class="text--underline">0,00</span>
+													</div>
+													<div class="text-small text-xs-body-2 fade-80 ml-2">
+														<span class="text--demibold">Out:</span>
+														<span class="text--underline">0,00</span>
+													</div>
+													<div class="text-small text-xs-body-2 fade-80 ml-2">
+														<span class="text--demibold">Profit:</span>
+														<span class="text--underline">0,00</span>
+													</div>
+
 												</div>
 											</div>
 										</div>
@@ -99,7 +109,35 @@
 							</div>
 						</div>
 						<% } %>
-					
+						<div class="mobile-table  mt-5">
+							<div class="halls-mobile-item__content" >
+								<div class="mobile-table-item halls-mobile-item" data-toggle-cover>
+									<div class="grid grid-spacing-1">
+										<div class="grid-col-5">
+											<div class="text--demibold text-small text-xs-body-2 color-text">kapitan_ks [martlet]</div>
+										</div>
+
+										<div class="grid-col-7">
+											<div class="flex">
+												<div class="text-small text-xs-body-2 fade-80">
+													<span class="text--demibold">In:</span>
+													<span class="text--underline">0,00</span>
+												</div>
+												<div class="text-small text-xs-body-2 fade-80 ml-2">
+													<span class="text--demibold">Out:</span>
+													<span class="text--underline">0,00</span>
+												</div>
+												<div class="text-small text-xs-body-2 fade-80 ml-2">
+													<span class="text--demibold">Profit:</span>
+													<span class="text--underline">0,00</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<!-- Таблица скрыта на (max-width:$md) -->
@@ -155,20 +193,23 @@
 						<div class="text-body-2 mb-3 fade-60">
 							ID назначается автоматически. По умолчанию создание операторов зала запрещено, администратор может включить эту функцию
 						</div>
-						<div class="flex">
-							<label class="form-field header-filter-field">
+						<div class="d-sm-flex">
+							<label class="form-field mr-sm-5 mb-4 mb-sm-0 w-100 w-sm-auto">
 								<div class="text-body-2 text-md-body-1 mb-1">Название зала</div>
 								<div class="form-input-cover">
 									<input type="text" class="form-input">
 								</div>
 							</label>
-							<label class="form-field header-filter-field">
+							<label class="form-field mr-sm-5 mb-4 mb-sm-0 w-100 w-sm-auto">
 								<div class="text-body-2 text-md-body-1 mb-1">Начальная сумма</div>
 								<div class="form-input-cover">
 									<input type="text" class="form-input">
 								</div>
 							</label>
-							<button class="btn btn--primary btn--fill px-5 flex-self-end">Добавить</button>
+							<button class="btn btn--primary btn--fill px-5 flex-self-end w-100 w-sm-auto">
+								<span class="text-small text-xs-body-1 text--demibold">	Добавить </span>
+							</button>
+
 						</div>
 					</form>
 				</div>

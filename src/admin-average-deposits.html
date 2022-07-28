@@ -20,6 +20,55 @@
 				<div class="content container">
 					<div class="text-h6 text-md-h4 color-primary mb-5">Средние депозиты по залам</div>
 
+					<!-- Мобильный вариант скрыт на (min-width:$md) -->
+					<div class="d-md-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item detailing-api-mobile-item px-5 py-4 table-cell--mark">
+								<div class="text-small text-xs-body-2 text--demibold text--center">Лимиты по средним депозитам</div>
+							</div>
+							<% for(let i = 0; i < 5; i++ ){ %>
+							<div class="mobile-table-item detailing-api-mobile-item px-5 py-4">
+								<div class="grid grid-spacing-2">
+									<div class="grid-col-12">
+										<div class="flex">
+											<div class="text-small text-xs-body-2 fade-80 flex-grow">
+												<span class="text--demibold">Код валюты: </span>
+												<span class="">36</span>
+											</div>
+											<div class="text-small text-xs-body-2 fade-80 flex-grow ml-2">
+												<span class="text--demibold">Название: </span>
+												<span class="">ALL</span>
+											</div>
+											<div class="text-small text-xs-body-2 fade-80 flex-grow ml-2">
+												<span class="text--demibold">Курс к USD: </span>
+												<span class="">114.62</span>
+											</div>
+
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mb-1">Минимальная норма: </div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" value="1 000 000">
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mb-1">Максимальная норма: </div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" value="6 000 000">
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<% } %>
+
+
+						</div>
+					</div>
 
 					<!-- Таблица скрыта на (max-width:$md) -->
 					<div class="d-none d-md-block">
@@ -66,8 +115,12 @@
 					</div>
 
 					<div class="flex flex-justify-center mt-5">
-						<button class="btn btn--primary btn--fill">Сохранить</button>
-						<button class="btn btn--primary btn--fill ml-3">Сгенерировать отчет</button>
+						<button class="btn btn--primary btn--fill w-50 w-xs-auto">
+							<span class="text-small text-xs-body-1 text--demibold">	Сохранить </span>
+						</button>
+						<button class="btn btn--primary btn--fill ml-3 w-50 w-xs-auto">
+							<span class="text-small text-xs-body-1 text--demibold">	Сгенерировать отчет </span>
+						</button>
 					</div>
 				</div>
 			</div>

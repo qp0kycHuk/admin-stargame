@@ -22,7 +22,7 @@
 
 					<%= _.template(require('./html-includes/tabs-by-period.html').default)() %>
 
-					<table class="table">
+					<table class="table mb-5">
 						<tbody class="table-body">
 							<tr class="table-row">
 								<td class="table-cell table-cell--mark text-body-2 text--center text--demibold"><div class="px-3"> 10.2.2.34 </div></td>
@@ -39,37 +39,144 @@
 						</tbody>
 					</table>
 
-					<div class="chart card mt-5">
-						<div class="chart-header">
-							<div class="text--demibold">Memory</div>
-							<div class="chart-lines">
-								<label class="chart-line form-field form-checkbox">
-									<input type="checkbox" class="form-input-checkbox">
-									<div class="form-checkbox-target">
-										<svg class="icon">
-											<use xlink:href="./img/icons.svg#gal-ochka" />
-										</svg>
+					<div class="grid grid-spacing-5">
+						<div class="grid-col-12">
+							<div class="chart card">
+								<div class="chart-header">
+									<div class="text--demibold">Memory</div>
+									<div class="chart-lines  d-none d-sm-flex ml-auto">
+										<label class="chart-line form-field form-checkbox">
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
+											<div class="text-small ml-1"> 10.2.2.32 </div>
+										</label>
+										<label class="chart-line form-field form-checkbox">
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
+											<div class="text-small ml-1"> 10.2.2.34 </div>
+										</label>
+									
 									</div>
-									<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
-									<div class="text-small ml-1"> 10.2.2.32 </div>
-								</label>
-								<label class="chart-line form-field form-checkbox">
-									<input type="checkbox" class="form-input-checkbox">
-									<div class="form-checkbox-target">
-										<svg class="icon">
-											<use xlink:href="./img/icons.svg#gal-ochka" />
-										</svg>
+								</div>
+								<div class="chart-content">
+									<div class="image image--rect bg-l2" style="max-height:300px"><div class="card-center-control fade-60 text-h6">Заглушка</div></div>
+								</div>
+								<div class="chart-lines d-sm-none mt-3">
+									<label class="chart-line form-field form-checkbox">
+										<input type="checkbox" class="form-input-checkbox">
+										<div class="form-checkbox-target">
+											<svg class="icon">
+												<use xlink:href="./img/icons.svg#gal-ochka" />
+											</svg>
+										</div>
+										<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
+										<div class="text-small ml-1"> 10.2.2.32 </div>
+									</label>
+									<label class="chart-line form-field form-checkbox">
+										<input type="checkbox" class="form-input-checkbox">
+										<div class="form-checkbox-target">
+											<svg class="icon">
+												<use xlink:href="./img/icons.svg#gal-ochka" />
+											</svg>
+										</div>
+										<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
+										<div class="text-small ml-1"> 10.2.2.34 </div>
+									</label>
+								
+								</div>
+							</div>
+
+						</div>
+						<% for(let i=0; i < 2; i++ ){ %>
+						<div class="grid-col-md-6">
+							<div class="chart card">
+								<div class="chart-header">
+									<div class="text--demibold">Servers online</div>
+									<div class="chart-lines d-none d-sm-flex ml-auto">
+										<label class="chart-line form-field form-checkbox">
+											<input type="checkbox" class="form-input-checkbox" checked>
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
+											<div class="text-small ml-1"> 10.2.2.32 </div>
+										</label>
+										<label class="chart-line form-field form-checkbox">
+											<input type="checkbox" class="form-input-checkbox" checked>
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
+											<div class="text-small ml-1"> 10.2.2.34 </div>
+										</label>
+										<label class="chart-line form-field form-checkbox">
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="chart-line__icon ml-1" style="background: #00C72C;"></div>
+											<div class="text-small ml-1"> live </div>
+										</label>
+									
 									</div>
-									<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
-									<div class="text-small ml-1"> 10.2.2.34 </div>
-								</label>
-							
+								</div>
+								<div class="chart-content">
+									<div class="image image--rect bg-l2" style="max-height:300px"><div class="card-center-control fade-60 text-h6">Заглушка</div></div>
+								</div>
+								<div class="chart-lines d-sm-none mt-3">
+									<label class="chart-line form-field form-checkbox">
+										<input type="checkbox" class="form-input-checkbox" checked>
+										<div class="form-checkbox-target">
+											<svg class="icon">
+												<use xlink:href="./img/icons.svg#gal-ochka" />
+											</svg>
+										</div>
+										<div class="chart-line__icon ml-1" style="background: #274EC0;"></div>
+										<div class="text-small ml-1"> 10.2.2.32 </div>
+									</label>
+									<label class="chart-line form-field form-checkbox">
+										<input type="checkbox" class="form-input-checkbox" checked>
+										<div class="form-checkbox-target">
+											<svg class="icon">
+												<use xlink:href="./img/icons.svg#gal-ochka" />
+											</svg>
+										</div>
+										<div class="chart-line__icon ml-1" style="background: #D12411;"></div>
+										<div class="text-small ml-1"> 10.2.2.34 </div>
+									</label>
+									<label class="chart-line form-field form-checkbox">
+										<input type="checkbox" class="form-input-checkbox">
+										<div class="form-checkbox-target">
+											<svg class="icon">
+												<use xlink:href="./img/icons.svg#gal-ochka" />
+											</svg>
+										</div>
+										<div class="chart-line__icon ml-1" style="background: #00C72C;"></div>
+										<div class="text-small ml-1"> live </div>
+									</label>
+								
+								</div>
 							</div>
 						</div>
-						<div class="chart-content">
-							
-						</div>
+						<% } %>
 					</div>
+
 				</div>
 			</div>
 		</div>

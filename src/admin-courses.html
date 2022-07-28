@@ -20,6 +20,119 @@
 					<div class="text-h6 text-md-h4 color-primary mb-5">Курсы и языки</div>
 
 
+					<!-- Мобильный вариант скрыт на (min-width:$md) -->
+					<div class="d-md-none">
+						<div class="mobile-table  mt-5">
+							<% for(let i = 0; i < 5; i++ ){ %>
+							<div class="mobile-table-item courses-mobile-item px-5 py-4">
+								<div class="grid grid-spacing-2">
+									<!-- Код валюты -->
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Код валюты: </span>
+											<span class="">12</span>
+										</div>
+									</div>
+									<!-- Платежи онлайн -->
+									<div class="grid-col-6">
+										<label class="form-field form-checkbox">
+											<div class="text-small text-xs-body-2 fade-80 mr-2">
+												<span class="text--demibold">Платежи онлайн: </span>
+											</div>
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+										</label>
+									</div>
+									<!-- Фикс. деноминация -->
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80 text--demibold mb-1">
+											Фикс. деноминация: 
+										</div>
+										<div class="flex flex-align-center">
+											<label class="form-field form-select w-50">
+												<div class="form-input-cover">
+													<select class="form-input px-3">
+														<option value="1"> 1.00</option>
+														<option value="2"> 2.00</option>
+													</select>
+													<div class="form-input-end pr-3 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+
+											<label class="form-field form-checkbox ml-2">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</div>
+										<div class="flex flex-align-center mt-3">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold text--right w-50">
+												Копейки: 
+											</div>
+											<label class="form-field form-checkbox ml-2">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</div>
+									</div>
+									<!-- Язык -->
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80 text--demibold mb-1">
+											Язык:
+										</div>
+										<label class="form-field w-100 form-select">
+											<div class="form-input-cover">
+												<select class="form-input px-3">
+													<option value="English"> English</option>
+													<option value="German"> German</option>
+													<option value="Russian"> Russian</option>
+												</select>
+												<div class="form-input-end pr-3 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+										<div class="flex flex-align-center mt-3">
+											<button class="btn btn--primary btn--white-bg btn-icon btn-xsmall mr-2">
+												<svg class="icon text-body-0">
+													<use xlink:href="img/icons.svg#save" />
+												</svg>
+											</button>
+											<div class="text-small text-xs-body-2 text--underline">Сохранить</div>
+										</div>
+									</div>
+									<!-- Курс к рублю -->
+									<div class="grid-col-12">
+										<div class="text-small text-xs-body-2 fade-80 text--center">
+											<span class="text--demibold">Курс к рублю: </span>
+											<span class="">0.34672789054214 </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<% } %>
+
+
+						</div>
+					</div>
+
 					<!-- Таблица скрыта на (max-width:$md) -->
 					<div class="d-none d-md-block">
 						<table class="table">

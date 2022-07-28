@@ -5,8 +5,7 @@
 
 
 :root {
-	// @include getColors(#14A9F6, "primary");
-	@include getColors(#1289A7, "primary");
+	@include getColors(#14A9F6, "primary");
 	@include getColors(#EA2027, "sec");
 	@include getColors(#246EDD, "blue");
 	@include getColors(#FF9820, "yellow");
@@ -14,6 +13,8 @@
 	@include getColors(#EB5757, "red");
 	@include getColors(#828A99, "icon");
 	@include getColors(#191919, "text");
+
+	// animation: colorChangeAnimation 12s infinite linear;
 
 	--bg1: #ffffff;
 	--bg2: #F4F5F6;
@@ -51,8 +52,6 @@
 		--space-right: 15px;
 	}
 
-
-	animation: colorChangeAnimation 12s infinite linear;
 }
 
 @keyframes colorChangeAnimation {
@@ -218,11 +217,18 @@ body {
 }
 
 .wrapper {
+	flex-grow     : 1;
+	display       : flex;
+	flex-direction: column;
+
 	&-inner {
+		flex-grow     : 1;
 		display       : flex;
 		width         : 100%;
 		padding-top   : 15px;
 		padding-bottom: 15px;
+		position      : relative;
+
 	}
 }
 
@@ -282,7 +288,6 @@ body {
 	background   : var(--bg3);
 	border-radius: var(--radius-middle);
 	padding      : 28px;
-
 
 	@media(max-width:$lg) {
 		position     : fixed;
@@ -429,6 +434,10 @@ body {
 		padding-left : 15px;
 		padding-right: 15px;
 
+		@media (max-width:$xs) {
+			font-size: 12px;
+		}
+
 		&.active {
 			position   : relative;
 			font-weight: 600;
@@ -506,13 +515,23 @@ body {
 			display        : flex;
 			align-items    : center;
 			justify-content: center;
-			padding        : 18px 15px;
+			padding        : 8px 15px;
 			width          : 100%;
+
+			@media (max-width:$us) {
+				padding-left : 10px;
+				padding-right: 10px;
+			}
 		}
 
 		&__content {
 			padding   : 15px;
 			border-top: 1px solid var(--color-text-10);
+
+			@media (max-width:$us) {
+				padding-left : 10px;
+				padding-right: 10px;
+			}
 		}
 
 		&__footer {
@@ -587,21 +606,43 @@ body {
 }
 
 .chart {
+	@media(max-width:$sm) {
+		border: none;
+
+	}
+
 	&-header {
-		display    : flex;
-		align-items: center;
-		padding    : 12px 28px;
+		display      : flex;
+		align-items  : center;
+		padding      : 12px 28px;
+		border-bottom: 1px solid var(--color-text-20);
+
+		@media(max-width:$sm) {
+			padding      : 0;
+			border       : none;
+			margin-bottom: 8px;
+
+		}
 	}
 
 	&-lines {
 		display    : flex;
 		align-items: center;
-		margin-left: auto;
+
+		@media(max-width:$sm) {
+			display              : grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap             : 10px;
+		}
 	}
 
 	&-line {
 		&+& {
-			margin-left: 15px;
+
+			@media(min-width:$sm) {
+				margin-left: 15px;
+			}
+
 		}
 
 		&__icon {
@@ -609,6 +650,38 @@ body {
 			height       : 4px;
 			border-radius: 2px;
 			display      : block;
+
+			@media(max-width:$sm) {
+				width: 20px;
+			}
+		}
+	}
+}
+
+.statistic-item {
+	@media (max-width:$sm) {
+		border       : 1px solid var(--color-text-20);
+		border-radius: var(--radius-small);
+
+	}
+
+	&__head {
+		display        : flex;
+		align-items    : center;
+		width          : 100%;
+		color          : var(--color-text);
+		justify-content: flex-start;
+
+		@media (max-width:$sm) {
+			padding: 8px 16px;
+		}
+	}
+
+	&__content {
+		@media (min-width:$sm) {
+			border       : 1px solid var(--color-text-20);
+			border-radius: var(--radius-small);
+			height       : auto !important;
 		}
 	}
 }

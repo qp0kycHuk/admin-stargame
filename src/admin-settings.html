@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Настройки - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/admin-header.html').default)() %>
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Настройки</div>
+
+					<div class="text-body-2 text-sm-body-0 text--demibold mb-2">Настройка Stargame Authenticator</div>
+					<div class="text-small text-sm-body-2">
+						Скачайте и установите приложение 
+						<a href="" class="btn btn--link btn--primary btn--underline color-text d-inline text-small text-sm-body-2 text--demibold">
+							(https://update.stargamecasino.com/android.apk)
+						</a>. <br> <br class="d-sm-none">
+						Воспользуйтесь камерой телефона для сканирования штрихкода.
+					</div>
+
+					<div class="my-5">
+						<img src="img/qr.png" alt="">
+					</div>
+					<div class="text-body-2">
+						После того, как штрихкод считан, введите 6-значный код подтверждения, <br>
+						сгенерированный приложением Authenticator.
+					</div>
+
+
+					<form class="mt-5">
+						<div class="text-body-2 text--demibold mb-2">Код</div>
+						<div class="flex w-100 w-md-auto">
+							<label class="form-field field-small flex-grow">
+								<div class="form-input-cover">
+									<input type="text" class="form-input pl-12" placeholder="Введите код">
+									<div class="form-input-start pl-4">
+										<svg class="icon text-h6 color-primary">
+											<use xlink:href="img/icons.svg#key" />
+										</svg>
+									</div>
+								</div>
+							</label>
+							<button class="btn btn--primary btn--fill ml-2 flex-self-end px-4 px-xs-5">
+								<span class="text-small text-xs-body-1 text--demibold">Проверить</span>
+							</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

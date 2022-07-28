@@ -75,9 +75,65 @@
 						</form>
 					</div>
 
-					<div class="text--bold mb-3">Всего (34789054)</div>
+					<!-- Мобильный вариант скрыт на (min-width:$md) -->
+					<div class="d-md-none">
+						<div class="mobile-table  mt-5">
+							<% for(let i = 0; i < 5; i++ ){ %>
+							<div class="mobile-table-item detailing-api-mobile-item px-5 py-4">
+								<div class="grid grid-spacing-2">
+									<div class="grid-col-12">
+										<div class="text-small text-xs-body-2 fade-80 text--center">
+											<span class="text--demibold">Operationid: </span>
+											<span class="text--underline">12574927521663278</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Systemid: </span>
+											<span class="text--underline">23596911</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Time: </span>
+											<span class="">10:06 16-06-2022</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Type: </span>
+											<span class="">Смена баланса</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Hallid: </span>
+											<span class="">10089</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Ticket: </span>
+											<span class="text--underline">481672303</span>
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Userid: </span>
+											<span class="">856643</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<% } %>
+
+
+						</div>
+					</div>
+
 					<!-- Таблица скрыта на (max-width:$md) -->
 					<div class="d-none d-md-block">
+						<div class="text--bold mb-3">Всего (34789054)</div>
 						<table class="table">
 							<thead class="table-head">
 								<tr class="table-row">
