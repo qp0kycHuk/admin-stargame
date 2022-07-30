@@ -26,6 +26,74 @@
 						<%= _.template(require('./html-includes/pagination.html').default)() %>
 					</div>
 
+					<!-- Мобильный вариант скрыт на (min-width:$md) -->
+					<div class="d-md-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item logs-mobile-item table-cell--mark px-6 py-3">
+								<div class="text-small text-sm-body-2 text--italic text--demibold">
+									*для получения детальной статистики нажмите 
+									на номер или баланс в записи
+								</div>
+							</div>
+							<% for(let i = 0; i < 5; i++ ){ %>
+							<div class="mobile-table-item logs-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-2">
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">№: </span>
+											<span class="text--underline">#28268399397</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Время: </span>
+											<span class="text--underline">15:07:32 15-06-2022</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Игра: </span>
+											<span class="">safariheat</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Money: </span>
+											<span class="text--underline">0.00</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Credit bet: </span>
+											<span class="">0</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Money bet: </span>
+											<span class="">0.20</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Credit win: </span>
+											<span class="">10</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Money win: 0.10</span>
+											<span class="">0.10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<% } %>
+
+
+						</div>
+					</div>
+
 					<!-- Таблица скрыта на (max-width:$md) -->
 					<div class="d-none d-md-block">
 						<table class="table">

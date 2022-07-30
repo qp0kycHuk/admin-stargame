@@ -393,10 +393,13 @@ body {
 	&-row {}
 
 	&-cell {
-		padding: 12px 4px;
+		padding: 4px;
 		border : 1px solid var(--color-text-10);
+		height : 54px;
 
-
+		&--small {
+			width: 148px;
+		}
 	}
 
 	// &-head:first-of-type &-row:first-of-type &-cell:first-of-type {
@@ -405,15 +408,14 @@ body {
 	// }
 
 	&-cell--mark,
-	&-head &-cell {
-		background: var(--color-primary-20);
+	&-head &-cell,
+	&-footer &-cell {
+		background: var(--color-primary-15);
 	}
 
 	&-footer {}
 
 	&-footer &-cell {
-		background: var(--color-primary-20);
-
 		&:not(:first-of-type) {
 			border-left: none;
 		}
@@ -602,7 +604,11 @@ body {
 	display    : flex;
 	align-items: center;
 
-	&-item {}
+	&-item {
+		@media (max-width:$sm) {
+			font-size: 12px;
+		}
+	}
 }
 
 .chart {
@@ -683,5 +689,15 @@ body {
 			border-radius: var(--radius-small);
 			height       : auto !important;
 		}
+	}
+}
+
+.time-field {
+	width: var(--size);
+
+	.form-input {
+		width        : 100%;
+		padding-left : 0;
+		padding-right: 0;
 	}
 }
