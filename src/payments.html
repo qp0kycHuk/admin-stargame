@@ -20,7 +20,7 @@
 					<div class="text-h6 text-md-h4 color-primary mb-5">Платежи и зачисления</div>
 					<%= _.template(require('./html-includes/tabs-by-period.html').default)() %>
 
-					<!-- Выберите период -->
+					<!-- ^ Выберите период -->
 					<div class="text--demibold text-body-2 text-md-body-1 mb-3">Выберите период</div>
 
 					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
@@ -234,10 +234,11 @@
 						<button class="btn btn--primary btn--contur ml-3 w-50 w-xs-auto">Свернуть</button>
 
 					</div>
-					<!-- /Выберите период -->
+					<!-- ^ /Выберите период -->
 
+					
 
-					<!-- Основная таблица -->
+					<!-- ! Основная таблица -->
 					<!-- Мобильный вариант скрыт на (min-width:$md) -->
 					<div class="d-md-none">
 						<div class="mobile-table  mt-5">
@@ -341,9 +342,118 @@
 							</tbody>
 						</table>
 					</div>
-					<!-- /Основная таблица -->
+					<!-- ! /Основная таблица -->
 
-					<!-- DEPOSIT -->
+
+
+					<!-- & DEPOSIT -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-10">
+							<div class="mobile-table-item px-5 py-4 table-cell--mark">
+								<div class="text-small text-xs-body-2 text--demibold text--center">DEPOSIT</div>
+							</div>
+							<div class="mobile-table-item px-5 py-4">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Агент: </div>
+											<div class="form-input-cover">
+												<select class="form-input">
+													<option value="">allen 18829</option>
+													<option value="">allen 28829</option>
+												</select>
+												<div class="form-input-end pr-4 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Валюта платежа: </div>
+											<div class="form-input-cover">
+												<select class="form-input">
+													<option value="">USD</option>
+													<option value="">RUB</option>
+													<option value="">GRN</option>
+													<option value="">EUR</option>
+												</select>
+												<div class="form-input-end pr-4 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Сумма платежа: </div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" placeholder="Введите сумму">	
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Кредиты: </div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" placeholder="Введите кредиты">	
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Рейт: </div>
+											<div class="form-input-cover">
+												<select class="form-input">
+													<option value="">10</option>
+													<option value="">20</option>
+													<option value="">30</option>
+													<option value="">40</option>
+												</select>
+												<div class="form-input-end pr-4 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Валюта агента: </div>
+											<div class="form-input-cover">
+												<select class="form-input">
+													<option value="">USD</option>
+													<option value="">RUB</option>
+													<option value="">GRN</option>
+													<option value="">EUR</option>
+												</select>
+												<div class="form-input-end pr-4 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-12">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Сумма (USD) </div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" placeholder="Введите сумму (USD)">	
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<!-- Таблица скрыта на (max-width:$sm) -->
 					<div class="d-none d-sm-block">
 						<table class="table mt-10">
@@ -359,7 +469,7 @@
 									</td>
 									<td class="table-cell">
 										<div class="flex flex-align-center px-4">
-											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+											<label class="form-field form-field-small field-xsmall flex-grow">
 												<div class="form-input-cover">
 													<select class="form-input">
 														<option value="">allen 18829</option>
@@ -381,7 +491,7 @@
 									</td>
 									<td class="table-cell">
 										<div class="flex flex-align-center px-4">
-											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+											<label class="form-field form-field-small field-xsmall flex-grow">
 												<div class="form-input-cover">
 													<select class="form-input">
 														<option value="">USD</option>
@@ -492,27 +602,27 @@
 							</tbody>
 						</table>
 					</div>
+
+					<!-- Кнопки -->
 					<div class="flex flex-justify-center mt-5">
-						<button class="btn btn--primary btn--fill">Сохранить</button>
+						<button class="btn btn--primary btn--fill w-100 w-xs-auto">Сохранить</button>
 					</div>
-					<!-- /DEPOSIT -->
+					<!-- & /DEPOSIT -->
 
-					<!-- Калькулятор валют -->
-					<table class="table mt-10">
-						<tbody class="table-body">
-							<tr class="table-row">
-								<td class="table-cell" colspan="100%">
-									<div class="text--demibold text--center">Калькулятор валют</div>
-								</td>
-							</tr>
 
-							<tr class="table-row">
-								<td class="table-cell table-cell--mark table-cell--small">
-									<div class="text-body-2 text--demibold text--center">Валюта платежа</div>
-								</td>
-								<td class="table-cell">
-									<div class="flex flex-align-center px-4">
-										<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+
+					<!-- ~ Калькулятор валют -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-10">
+							<div class="mobile-table-item px-5 py-4 table-cell--mark">
+								<div class="text-small text-xs-body-2 text--demibold text--center">Калькулятор валют</div>
+							</div>
+							<div class="mobile-table-item px-5 py-4">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Валюта платежа: </div>
 											<div class="form-input-cover">
 												<select class="form-input">
 													<option value="">USD</option>
@@ -528,34 +638,22 @@
 											</div>
 										</label>
 									</div>
-								</td>
-							</tr>
-							<tr class="table-row">
-								<td class="table-cell table-cell--mark table-cell--small">
-									<div class="text-body-2 text--demibold text--center">Сумма платежа</div>
-								</td>
-								<td class="table-cell">
-									<div class="flex flex-align-center px-4">
-										<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Сумма платежа: </div>
 											<div class="form-input-cover">
-												<input type="text" class="form-input" placeholder="Введите сумму платежа">	
+												<input type="text" class="form-input" placeholder="Введите сумму">	
 											</div>
 										</label>
 									</div>
-								</td>
-							</tr>
-							<tr class="table-row">
-								<td class="table-cell table-cell--mark table-cell--small">
-									<div class="text-body-2 text--demibold text--center">Валюта перевода</div>
-								</td>
-								<td class="table-cell">
-									<div class="flex flex-align-center px-4">
-										<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Валюта перевода: </div>
 											<div class="form-input-cover">
 												<select class="form-input">
-													<option value="">ZAR</option>
-													<option value="">RUB</option>
 													<option value="">GRN</option>
+													<option value="">RUB</option>
+													<option value="">USD</option>
 													<option value="">EUR</option>
 												</select>
 												<div class="form-input-end pr-4 pe-none">
@@ -566,25 +664,109 @@
 											</div>
 										</label>
 									</div>
-								</td>
-							</tr>
-							<tr class="table-row">
-								<td class="table-cell table-cell--mark table-cell--small">
-									<div class="text-body-2 text--demibold text--center">Сумма перевода</div>
-								</td>
-								<td class="table-cell">
-									<div class="flex flex-align-center px-4">
-										<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+									<div class="grid-col-6">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 text--medium mb-1">Сумма перевода:</div>
 											<div class="form-input-cover">
-												<input type="text" class="form-input" placeholder="Введите сумму перевода">	
+												<input type="text" class="form-input" placeholder="Введите сумму ">	
 											</div>
 										</label>
 									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- /Калькулятор валют -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="text--demibold text--center">Калькулятор валют</div>
+									</td>
+								</tr>
+
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Валюта платежа</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex flex-align-center px-4">
+											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+												<div class="form-input-cover">
+													<select class="form-input">
+														<option value="">USD</option>
+														<option value="">RUB</option>
+														<option value="">GRN</option>
+														<option value="">EUR</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Сумма платежа</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex flex-align-center px-4">
+											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" placeholder="Введите сумму платежа">	
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Валюта перевода</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex flex-align-center px-4">
+											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+												<div class="form-input-cover">
+													<select class="form-input">
+														<option value="">ZAR</option>
+														<option value="">RUB</option>
+														<option value="">GRN</option>
+														<option value="">EUR</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Сумма перевода</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex flex-align-center px-4">
+											<label class="form-field form-field-small field-xsmall mr-3 flex-grow">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" placeholder="Введите сумму перевода">	
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- ~ /Калькулятор валют -->
 				</div>
 			</div>
 		</div>
