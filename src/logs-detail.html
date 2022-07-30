@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Логи игр - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Логи игр</div>
+
+					<div class="mb-5">
+						<%= _.template(require('./html-includes/breadcrumbs.html').default)() %>
+					</div>
+					<div class="flex mb-5">
+						<div class="text-body-2">Логи игр</div>
+						<div class="text--bold mx-1 text-body-2"> > </div>
+						<button class="breadcrumbs-item btn btn--link btn--primary color-text btn--underline text-body-2">bay1</button>
+						<div class="text--bold mx-1 text-body-2"> > </div>
+						<button class="breadcrumbs-item btn btn--link btn--primary color-text btn--underline text-body-2">(102462) pc5</button>
+					</div>
+					<div class="flex mb-5">
+						<button class="breadcrumbs-item btn btn--link btn--primary color-text btn--underline text-body-2">Зал: bay1</button>
+						<button class="breadcrumbs-item btn btn--link btn--primary color-text btn--underline text-body-2 ml-3">Терминал: pc5</button>
+					</div>
+
+
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item logs-mobile-item table-cell--mark px-6 py-3">
+								<div class="text-small text-xs-body-2 text--demibold text--center">
+									Game information: safariheat (2022-06-15  15:07:17)
+								</div>
+							</div>
+							
+							<div class="mobile-table-item logs-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-2">
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Time: </span>
+											<span class="">2022-06-15 15:07:17 </span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Place: </span>
+											<span class="">pc5</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Line bet: </span>
+											<span class="">2</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Select lines: </span>
+											<span class="">10</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Win: </span>
+											<span class="">0.40</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Win: </span>
+											<span class="">40 credits</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Balance: </span>
+											<span class="">0.70</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Balance: </span>
+											<span class="">70 credits</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">freegamecount: </span>
+											<span class="">0</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">freegames: </span>
+											<span class="">0</span>
+										</div>
+									</div>
+									<div class="grid-col-7">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">freegamewon: </span>
+											<span class="">0 credits</span>
+										</div>
+									</div>
+									<div class="grid-col-5">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class="text--demibold">Game log: </span>
+											<span class="text--underline">Show</span>
+										</div>
+									</div>
+									<div class="grid-col-12">
+										<div class="text-small text-xs-body-2 text--center fade-80">
+											<span class="text--demibold">Denomination: </span>
+											<span class="">1 Credit = 0.01</span>
+										</div>
+									</div>
+				
+								</div>
+							</div>
+							
+
+
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="text--demibold text--center">Game information: safariheat (2022-06-15  15:07:17)</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Time</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">2022-06-15 15:07:17 </div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Place</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">pc5</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Line bet</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">2</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Select lines</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">11 </div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Win</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">0.40</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Win</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">40 credits </div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Balance</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">0.70</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Balance</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">70 credits</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">freegamecount</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">0 </div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">freegames</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">0 </div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">freegamewon</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">0 credits</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Denomination</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">1 Credit = 0.01</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--small">
+										<div class="text-body-2 text--demibold text--center">Game log</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 text--underline fade-80 px-4">Show </div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Кнопки -->
+					<div class="flex mt-5">
+						<button class="btn btn--primary btn--fill">
+							<svg class="icon mr-2">
+								<use xlink:href="img/icons.svg#arrow-left" />
+							</svg>
+							Назад
+						</button>
+						<button class="btn btn--primary btn--fill ml-auto">
+							Далее
+							<svg class="icon ml-2">
+								<use xlink:href="img/icons.svg#arrow-right" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="flex mt-5">
+						<img src="img/logs-detail.png" alt="" class="mx-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

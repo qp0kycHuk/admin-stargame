@@ -4,12 +4,12 @@
 
 .form {
 	&-field {
-		display: block;
-		cursor: pointer;
-		position: relative;
+		display      : block;
+		cursor       : pointer;
+		position     : relative;
 		--error-color: var(--color-red);
 		--field-color: var(--color-primary);
-		--size: 42px;
+		--size       : 42px;
 
 		&-small {
 			--size: 36px
@@ -21,18 +21,18 @@
 	}
 
 	&-helper {
-		font-size: 12px;
-		width: max-content;
+		font-size  : 12px;
+		width      : max-content;
 		margin-left: auto;
-		margin-top: 2px;
-		color: var(--color-text-60);
+		margin-top : 2px;
+		color      : var(--color-text-60);
 	}
 
 	&-input-cover {
-		display: flex;
+		display    : flex;
 		align-items: center;
-		position: relative;
-		transition: .2s ease;
+		position   : relative;
+		transition : .2s ease;
 
 
 	}
@@ -42,31 +42,31 @@
 		outline: none !important;
 		display: flex;
 
-		height: var(--size);
-		position: relative;
-		padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+		height   : var(--size);
+		position : relative;
+		padding  : calc(var(--spacing) * 2) calc(var(--spacing) * 4);
 		flex-grow: 1;
+		max-width: 100%;
 
 
-
-		cursor: inherit;
-		outline: none;
+		cursor    : inherit;
+		outline   : none;
 		appearance: none;
 
-		font-size: 16px;
+		font-size  : 16px;
 		font-family: var(--font-base);
-		color: var(--color-text);
+		color      : var(--color-text);
 
 		background-color: rgba(0, 0, 0, 0);
-		border: 1px solid var(--color-text-10);
+		border          : 1px solid var(--color-text-10);
 
 		&:first-of-type {
 			border-start-start-radius: var(--radius-small);
-			border-end-start-radius: var(--radius-small);
+			border-end-start-radius  : var(--radius-small);
 		}
 
 		&:last-of-type {
-			border-end-end-radius: var(--radius-small);
+			border-end-end-radius  : var(--radius-small);
 			border-start-end-radius: var(--radius-small);
 		}
 
@@ -77,14 +77,14 @@
 
 		&:focus {
 			border-color: var(--color-icon);
-			z-index: 2;
+			z-index     : 2;
 		}
 
 		&:disabled {
-			color: var(--color-text-60);
-			border: 1px solid var(--color-text-10);
+			color           : var(--color-text-60);
+			border          : 1px solid var(--color-text-10);
 			background-color: var(--bg2);
-			opacity: .8;
+			opacity         : .8;
 
 			&:placeholder {
 				color: var(--color-text-60);
@@ -99,26 +99,26 @@
 
 		&[type="date"]::-webkit-calendar-picker-indicator,
 		&[type="time"]::-webkit-calendar-picker-indicator {
-			background: none;
+			background    : none;
 			pointer-events: none;
 		}
 
 		&-large {
-			height: 52px;
+			height       : 52px;
 			border-radius: var(--radius-middle);
 		}
 
 
 		&.active {
 			border-color: var(--color-primary);
-			box-shadow: 0 0 0 1px var(--color-primary);
-			z-index: 2;
+			box-shadow  : 0 0 0 1px var(--color-primary);
+			z-index     : 2;
 		}
 
 		&.error {
-			color: var(--color-red);
+			color       : var(--color-red);
 			border-color: var(--color-red);
-			z-index: 2;
+			z-index     : 2;
 
 			&::placeholder {
 				color: var(--color-red);
@@ -137,12 +137,12 @@
 
 	&-input-start,
 	&-input-end {
-		position: absolute;
-		top: 0;
-		height: 100%;
-		display: flex;
+		position   : absolute;
+		top        : 0;
+		height     : 100%;
+		display    : flex;
 		align-items: center;
-		z-index: 3;
+		z-index    : 3;
 	}
 
 	&-input-start {
@@ -154,52 +154,52 @@
 	}
 
 	&-checkbox {
-		display: flex;
+		display    : flex;
 		align-items: center;
 	}
 
 
 	&-input-checkbox {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 0;
-		height: 0;
-		overflow: hidden;
-		padding: calc(var(--spacing) * 2);
+		position  : absolute;
+		left      : 0;
+		top       : 0;
+		width     : 0;
+		height    : 0;
+		overflow  : hidden;
+		padding   : calc(var(--spacing) * 2);
 		visibility: hidden;
 		background: none;
-		border: none;
-		outline: none;
+		border    : none;
+		outline   : none;
 		box-shadow: none;
-		z-index: -1;
+		z-index   : -1;
 		appearance: none;
 	}
 
 	&-toggle-target {
-		--cover-width: 48px;
+		--cover-width : 48px;
 		--cover-height: 24px;
-		--padding: 3px;
-		width: var(--cover-width);
-		min-width: var(--cover-width);
-		height: var(--cover-height);
-		background: var(--bg3);
-		border-radius: 38px;
-		position: relative;
-		overflow: hidden;
+		--padding     : 3px;
+		width         : var(--cover-width);
+		min-width     : var(--cover-width);
+		height        : var(--cover-height);
+		background    : var(--bg3);
+		border-radius : 38px;
+		position      : relative;
+		overflow      : hidden;
 
-		display: flex;
+		display    : flex;
 		align-items: center;
 
 
 		&:before {
-			--size: 16px;
-			z-index: 2;
-			content: '';
-			width: var(--size);
-			height: var(--size);
+			--size       : 16px;
+			z-index      : 2;
+			content      : '';
+			width        : var(--size);
+			height       : var(--size);
 			border-radius: 50%;
-			background: var(--color-primary);
+			background   : var(--color-primary);
 
 			// box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
 			display: block;
@@ -207,8 +207,8 @@
 			transition: .2s ease;
 
 			position: absolute;
-			left: var(--padding);
-			top: calc(50% - var(--size) / 2);
+			left    : var(--padding);
+			top     : calc(50% - var(--size) / 2);
 		}
 	}
 
@@ -217,31 +217,31 @@
 
 		&::before {
 			background: var(--bg3);
-			transform: translateX(calc(var(--cover-width) - var(--size) - var(--padding) - var(--padding)));
+			transform : translateX(calc(var(--cover-width) - var(--size) - var(--padding) - var(--padding)));
 		}
 	}
 
 	&-checkbox-target {
 		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
 		// background: var(--bg3);
-		border: 1px solid var(--color-text-40);
-		border-radius: 4px;
+		border             : 1px solid var(--color-text-40);
+		border-radius      : 4px;
 		background-position: center;
-		display: block;
-		min-width: 22px;
-		width: 22px;
-		height: 22px;
+		display            : block;
+		min-width          : 22px;
+		width              : 22px;
+		height             : 22px;
 
-		display: flex;
-		align-items: center;
+		display        : flex;
+		align-items    : center;
 		justify-content: center;
 
 		.icon {
-			font-size: 14px;
-			color: transparent;
+			font-size     : 14px;
+			color         : transparent;
 			pointer-events: none;
-			transition: .2s ease;
-			transform: scale(0);
+			transition    : .2s ease;
+			transform     : scale(0);
 		}
 
 
@@ -250,45 +250,45 @@
 	}
 
 	&-input-checkbox:checked~&-checkbox-target {
-		animation: check .3s forwards;
-		background: var(--color-primary);
+		animation   : check .3s forwards;
+		background  : var(--color-primary);
 		border-color: var(--color-primary);
 
 		.icon {
-			color: #fff;
+			color    : #fff;
 			transform: scale(1);
 		}
 	}
 
 	&-radio-target {
 		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
-		background: var(--bg3);
-		border: 1px solid var(--color-text-40);
+		background         : var(--bg3);
+		border             : 1px solid var(--color-text-40);
 		background-position: center;
-		min-width: 20px;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
+		min-width          : 20px;
+		width              : 20px;
+		height             : 20px;
+		border-radius      : 50%;
 
 
-		display: flex;
-		align-items: center;
+		display        : flex;
+		align-items    : center;
 		justify-content: center;
 
 
 
 		&:before {
-			content: '';
-			width: 10px;
-			height: 10px;
+			content      : '';
+			width        : 10px;
+			height       : 10px;
 			border-radius: 50%;
-			display: block;
-			margin: auto;
-			background: var(--color-primary);
+			display      : block;
+			margin       : auto;
+			background   : var(--color-primary);
 
 			transition: .2s ease;
-			opacity: 0;
-			transform: scale(0);
+			opacity   : 0;
+			transform : scale(0);
 		}
 
 
@@ -302,7 +302,7 @@
 
 		&:before {
 			transform: none;
-			opacity: 1;
+			opacity  : 1;
 		}
 	}
 
@@ -321,20 +321,20 @@
 	&-checkbox &-input-checkbox:disabled~&-radio-target,
 	&-checkbox &-input-checkbox.disabled~&-checkbox-target,
 	&-checkbox &-input-checkbox:disabled~&-checkbox-target {
-		box-shadow: none;
+		box-shadow    : none;
 		pointer-events: none;
-		opacity: .5;
+		opacity       : .5;
 	}
 
 
 	&-select {
 		&-icon {
-			position: absolute;
-			font-size: 10px;
-			right: 10px;
-			top: calc(50% - 5px);
-			color: var(--color-icon);
-			z-index: 3;
+			position      : absolute;
+			font-size     : 10px;
+			right         : 10px;
+			top           : calc(50% - 5px);
+			color         : var(--color-icon);
+			z-index       : 3;
 			pointer-events: none;
 		}
 	}
@@ -352,56 +352,56 @@
 }
 
 .range {
-	cursor: pointer;
+	cursor  : pointer;
 	position: relative;
 
 
 	&-inner {
 		// padding: 20px;
 		// margin : -20px;
-		padding-top: 12px;
+		padding-top   : 12px;
 		padding-bottom: 12px;
-		position: relative;
+		position      : relative;
 
 		position: absolute;
-		left: 0;
-		width: 100%;
-		top: -12px;
+		left    : 0;
+		width   : 100%;
+		top     : -12px;
 	}
 
 	&-btn {
-		display: flex;
-		background: var(--color-primary);
-		border: 3px solid var(--bg3);
-		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24);
-		position: absolute;
-		width: 22px;
-		height: 22px;
+		display      : flex;
+		background   : var(--color-primary);
+		border       : 3px solid var(--bg3);
+		box-shadow   : 0px 1px 1px rgba(0, 0, 0, 0.24);
+		position     : absolute;
+		width        : 22px;
+		height       : 22px;
 		border-radius: 50%;
 
-		left: 0;
-		top: calc(50% - 11px);
-		transform: translateX(-50%);
+		left          : 0;
+		top           : calc(50% - 11px);
+		transform     : translateX(-50%);
 		pointer-events: none;
-		transition: .1s;
+		transition    : .1s;
 	}
 
 	&-line {
-		height: 5px;
+		height    : 5px;
 		background: var(--bg2);
 
 		border-radius: 0px 0px 6px 6px;
 	}
 
 	&-progress {
-		position: absolute;
-		left: 0;
-		top: 12px;
-		height: 5px;
-		background: var(--color-primary);
-		border-radius: 0px 0px 6px 6px;
+		position      : absolute;
+		left          : 0;
+		top           : 12px;
+		height        : 5px;
+		background    : var(--color-primary);
+		border-radius : 0px 0px 6px 6px;
 		pointer-events: none;
-		transition: .1s;
+		transition    : .1s;
 	}
 
 	&-value {
@@ -412,7 +412,7 @@
 
 .form-range {
 	position: absolute;
-	left: -1px;
-	bottom: 5px;
-	width: calc(100% + 2px);
+	left    : -1px;
+	bottom  : 5px;
+	width   : calc(100% + 2px);
 }

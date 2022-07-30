@@ -1,7 +1,7 @@
 // out:false
 @mixin Width {
 	&-10 {
-		width: 25%;
+		width: 10%;
 	}
 
 	&-25 {
@@ -12,12 +12,20 @@
 		width: calc(100% / 3);
 	}
 
+	&-40 {
+		width: 50%;
+	}
+
 	&-50 {
 		width: 50%;
 	}
 
 	&-60 {
 		width: 60%;
+	}
+
+	&-66 {
+		width: calc(2 * 100% / 3);
 	}
 
 	&-75 {

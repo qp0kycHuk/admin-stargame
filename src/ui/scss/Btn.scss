@@ -3,7 +3,7 @@
 @mixin btnColor($name, $accent:#fff) {
 	&--#{$name} {
 		--btn-color      : var(--color-#{$name});
-		--btn-color-light: var(--color-#{$name}-10);
+		--btn-color-light: var(--color-#{$name}-15);
 		--btn-text       : #{$accent};
 
 		@media (hover) {
@@ -77,20 +77,25 @@
 	}
 
 	// size
-	&-large {
-		--size       : 52px;
-		font-size    : 18px;
-		border-radius: var(--radius-middle);
-	}
+	@include AddMedia {
+		&-xlarge {
+			--size: 70px;
+		}
 
-	&-small {
-		--size   : 36px;
-		font-size: 14px;
-	}
+		&-large {
+			--size   : 52px;
+			font-size: 18px;
+		}
 
-	&-xsmall {
-		--size   : 28px;
-		font-size: 14px;
+		&-small {
+			--size   : 36px;
+			font-size: 14px;
+		}
+
+		&-xsmall {
+			--size   : 28px;
+			font-size: 14px;
+		}
 	}
 
 	// color

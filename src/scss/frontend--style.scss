@@ -14,7 +14,7 @@
 	@include getColors(#828A99, "icon");
 	@include getColors(#191919, "text");
 
-	animation: colorChangeAnimation 12s infinite linear;
+	// animation: colorChangeAnimation 12s infinite linear;
 
 	--bg1: #ffffff;
 	--bg2: #F4F5F6;
@@ -436,6 +436,10 @@ body {
 		&--small {
 			width: 148px;
 		}
+
+		&--middle {
+			width: 370px;
+		}
 	}
 
 	// &-head:first-of-type &-row:first-of-type &-cell:first-of-type {
@@ -743,4 +747,8 @@ body {
 
 .air-datepicker-global-container {
 	z-index: var(--zi-l3);
+}
+
+option{
+	background: var(--bg3);
 }

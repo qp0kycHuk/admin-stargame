@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Управление залом > uganda - Stargame</title>
+</head>
+
+<body>
+	<div class="root">
+		<%= _.template(require('./html-includes/header.html').default)() %>
+
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
+
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Управление залом > uganda</div>
+
+					<div class="grid grid-spacing-lg-5">
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#settings" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Настройки</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#shield-check" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Безопасность</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#microphone" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Операторы</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#diamond" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Джекпот</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#user-plus" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Игроки</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#wallet" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Платежи</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#doc" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Логи игр</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#message" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">СМС-настройки</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#settings-1" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Инженеры</span>
+							</button>
+						</div>
+						<div class="grid-col-6 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#chart-1" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Статистика</span>
+							</button>
+						</div>
+						<div class="grid-col-12 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#send-1" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Отправить сообщение</span>
+							</button>
+						</div>
+						<div class="grid-col-12 grid-col-sm-4 grid-col-md-3">
+							<button class="btn btn--primary btn--light btn-lg-xlarge w-100 px-2">
+								<svg class="icon text-subtitle-2 text-lg-h5 mr-3">
+									<use xlink:href="img/icons.svg#user-box" />
+								</svg>
+								<span class="color-text text-xl-subtitle-2">Tournaments</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
