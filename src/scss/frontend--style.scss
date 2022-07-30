@@ -14,7 +14,7 @@
 	@include getColors(#828A99, "icon");
 	@include getColors(#191919, "text");
 
-	// animation: colorChangeAnimation 12s infinite linear;
+	animation: colorChangeAnimation 12s infinite linear;
 
 	--bg1: #ffffff;
 	--bg2: #F4F5F6;
@@ -42,10 +42,11 @@
 	--zi-l8: 328;
 	--zi-l9: 329;
 
-	--header-height: 52px;
-	--sidebar-width: 300px;
-	--space-right  : calc(180 * (100vw - var(--sidebar-width) - 1340px) / (96 + 180));
-	--space-left   : calc(96 * (100vw - var(--sidebar-width) - 1340px) / (96 + 180));
+	--admin-header-height: 42px;
+	--header-height      : 52px;
+	--sidebar-width      : 300px;
+	--space-right        : calc(180 * (100vw - var(--sidebar-width) - 1340px) / (96 + 180));
+	--space-left         : calc(96 * (100vw - var(--sidebar-width) - 1340px) / (96 + 180));
 
 	@media(max-width:$xl) {
 		--space-left : 15px;
@@ -221,6 +222,10 @@ body {
 	display       : flex;
 	flex-direction: column;
 
+	@media(min-width:$lg) {
+		padding-left: var(--sidebar-width);
+	}
+
 	&-inner {
 		flex-grow     : 1;
 		display       : flex;
@@ -277,17 +282,43 @@ body {
 	}
 }
 
+.admin-header~.header {
+	@media(min-width:$xl) {
+		top: var(--admin-header-height);
+	}
+}
+
 [data-theme="dark"] .header {
 	background: var(--bg2);
 
 }
 
 .sidebar {
-	min-width    : var(--sidebar-width);
-	width        : var(--sidebar-width);
-	background   : var(--bg3);
-	border-radius: var(--radius-middle);
-	padding      : 28px;
+	min-width: var(--sidebar-width);
+	width    : var(--sidebar-width);
+
+	position      : fixed;
+	top           : var(--header-height);
+	bottom        : 0;
+	left          : 0;
+	overflow      : auto;
+	padding-top   : 15px;
+	padding-bottom: 15px;
+
+
+	&-inner {
+		padding      : 28px;
+		width        : 100%;
+		background   : var(--bg3);
+		border-radius: var(--radius-middle);
+
+		@media(max-width:$lg) {
+			background   : none;
+			padding-top  : 4px;
+			padding-left : 15px;
+			padding-right: 15px;
+		}
+	}
 
 	@media(max-width:$lg) {
 		position     : fixed;
@@ -298,9 +329,8 @@ body {
 		z-index      : var(--zi-l5);
 		border-radius: 0;
 		transition   : .25s ease;
-		padding-top  : 4px;
-		padding-left : 15px;
-		padding-right: 15px;
+		padding      : 0;
+		background   : var(--bg3);
 
 		&:not(.toggle-active) {
 			transform: translateX(-100%);
@@ -344,6 +374,12 @@ body {
 
 	.theme-toggle .form-input-checkbox:checked~.form-toggle-target {
 		background: var(--bg1);
+	}
+}
+
+.admin-header~.wrapper .sidebar {
+	@media(min-width:$xl) {
+		top: calc(var(--header-height) + var(--admin-header-height));
 	}
 }
 
@@ -462,8 +498,11 @@ body {
 .admin-header {
 	display    : flex;
 	align-items: center;
-	background : var(--color-primary-20);
-	height     : 42px;
+	background : linear-gradient(var(--color-primary-20), var(--color-primary-20)), var(--bg1);
+	height     : var(--admin-header-height);
+	position   : sticky;
+	top        : 0;
+	z-index    : var(--zi-l2);
 
 	@media(max-width:$xl) {
 		display: none;
@@ -700,4 +739,8 @@ body {
 		padding-left : 0;
 		padding-right: 0;
 	}
+}
+
+.air-datepicker-global-container {
+	z-index: var(--zi-l3);
 }
