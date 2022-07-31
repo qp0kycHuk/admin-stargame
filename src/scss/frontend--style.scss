@@ -120,6 +120,9 @@ body {
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 
+	&.menu-open{
+		overflow: hidden;
+	}
 }
 
 .active-enabled {
@@ -139,6 +142,7 @@ body {
 }
 
 .container {
+	width        : 100%;
 	padding-left : var(--space-left);
 	padding-right: var(--space-right);
 }
@@ -405,6 +409,13 @@ body {
 	@media(min-width:$md) {
 		max-width: 310px;
 		width    : 310px;
+	}
+}
+
+.field-large {
+	@media(min-width:$md) {
+		max-width: 444px;
+		width    : 444px;
 	}
 }
 
@@ -749,6 +760,14 @@ body {
 	z-index: var(--zi-l3);
 }
 
-option{
+option {
 	background: var(--bg3);
+}
+
+.edit-page-btns {
+	position: sticky;
+	bottom  : 10px;
+	z-index : var(--zi-l1);
+
+	@media (max-width:$sm) {}
 }

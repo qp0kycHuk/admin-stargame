@@ -17,7 +17,10 @@
 	}
 
 	&-field-small &-input {
-		font-size: 16px;
+		@media (min-width:$sm) {
+			font-size: 14px;
+
+		}
 	}
 
 	&-helper {
