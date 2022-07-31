@@ -143,14 +143,14 @@
 			&:before {
 				content: '';
 
-				min-width    : 6px;
-				width        : 6px;
-				height       : 6px;
+				min-width    : 7px;
+				width        : 7px;
+				height       : 7px;
 				border-radius: 50%;
 				margin-right : calc(var(--spacing) * 3);
 				background   : var(--color-primary);
 
-				margin-top: 0.5em;
+				margin-top: 0.3em;
 			}
 		}
 	}
