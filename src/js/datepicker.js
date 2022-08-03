@@ -16,7 +16,7 @@ const init = (root, options = {}) => {
   const pickerOptions = {
     locale: localeRu,
     minDate: minStart,
-    dateFormat: 'dd MMMM yyyy',
+    dateFormat: 'dd.MM.yyyy',
     isMobile: isTouchDevice(),
     autoClose: true,
     ...options

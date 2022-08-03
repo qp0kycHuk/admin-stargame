@@ -120,7 +120,7 @@ body {
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 
-	&.menu-open{
+	&.menu-open {
 		overflow: hidden;
 	}
 }
@@ -770,4 +770,21 @@ option {
 	z-index : var(--zi-l1);
 
 	@media (max-width:$sm) {}
+}
+
+.accordion {
+	&-header {
+		position: relative;
+	}
+
+	&-icon {
+		position : absolute;
+		right    : 24px;
+		font-size: 12px;
+		top      : calc(50% - 6px);
+	}
+
+	&-content {
+
+	}
 }
