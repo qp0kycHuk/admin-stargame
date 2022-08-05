@@ -12,404 +12,897 @@
 	<div class="root">
 		<%= _.template(require('./html-includes/header.html').default)() %>
 
-			<div class="wrapper">
-				<div class="wrapper-inner">
-					<%= _.template(require('./html-includes/sidebar.html').default)() %>
+		<div class="wrapper">
+			<div class="wrapper-inner">
+				<%= _.template(require('./html-includes/sidebar.html').default)() %>
 
-					<div class="content container">
-						<div class="text-h6 text-md-h4 color-primary mb-5">Настройки Джекпота > uganda</div>
+				<div class="content container">
+					<div class="text-h6 text-md-h4 color-primary mb-5">Настройки Джекпота > uganda</div>
 
-						<!-- Таблица скрыта на (max-width:$sm) -->
-						<div class="d-none d-sm-block">
-							<table class="table mt-10">
-								<tbody class="table-body">
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Значение джекпота</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Накопленное значение джекпота на текущий момент времени. Это значение может отличаться от реального, так как джекпот сохраняется примерно каждые 60 минут.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Активация</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												При достижении этого значения джекпот из пассивного состояния переходит в активное. В пассивном состоянии джекпот не может быть выигран. Когда джекпот в активном состоянии, у каждого игрока есть шанс выиграть джекпот при условии, что ставка игрока удовлетворяет условиям розыгрыша джекпота.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Таймер</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Время в секундах. После активации джекпота включается обратный таймер отсчета времени. Стартовое значение таймера равно величине поля 
-												Таймер. Шансы игрока выиграть джекпот увеличиваются при приближении таймера к нулю. Когда таймер кончается, джекпот будет 
-												гарантировано выигран первым же игроком, ставка которого удовлетворяет условиям розыгрыша джекпота.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Процент</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Процент с каждой ставки в джекпот. Значение процента может быть от 1 до 2 (целое число). 1 — рекомендуемое значение. Оно оптимально для залов с небольшим оборотом.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Макс. значение</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Если максимальное значение 0, оно игнорируется и джекпот выдается по таймеру. Если больше, чем значение активации, джекпот выдается по макс. значению. Чем ближе накопление к нему, тем выше вероятность выпадения джекпота.
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Мин. ставка</div>
-										</td>
-										<td class="table-cell">
-											<div class=" px-4 py-4">
-												<div class="text-body-2 fade-80">
-													Минимальная ставка при которой игрок принимает участие в розыгрыше джекпота. При игре на меньшие ставки игрок выиграть джекпот не может.
-												</div>
-												<div class="text-body-2 text--demibold mt-5">Внимание!!! Указывается в центах</div>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Основное значение</div>
-										</td>
-										<td class="table-cell">
-												<div class=" px-4 py-4">
-													<div class="text-body-2 fade-80">
-														Основное значение джекпота, по умолчанию 0. Если значение больше нуля, после выпадения каждого джекпота, значение следующего джекпот будет стартовать с этой величины.
+					<!-- ~ значения слов -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none" data-toggle-cover>
+						<button class="btn btn--primary btn--fill w-100 active-disabled" data-toggle-link>Раскрыть значения
+							слов</button>
+						<button class="btn btn--primary btn--contur mb-5 w-100 active-enabled" data-toggle-link>Скрыть значения
+							слов</button>
 
-													</div>
-													<div class="text-body-2 text--demibold mt-5">Внимание!!! Основное значение джекпота снимается с баланса зала</div>
-												</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Сообщение</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Текст сообщения, которое будет выводится на игровом терминале. Допустимы только латинские символы, а также знаки «.», «,», «!», «:».
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Время выпадения джекпота</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4 py-4">
-												Вы можете регулировать временной интервал выпадения джекпотов. Минимальный промежуток — 1 час в сутки. Время задается по локальному времени зала.
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="mobile-table  mt-5 active-enabled">
+
+
+							<div class="mobile-table-item control-mobile-item px-6 py-3">
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Значение джекпота: </div>
+									<div class="text-small text-xs-body-2">
+										Накопленное значение джекпота на текущий момент
+										времени. Это значение может отличаться от
+										реального, так как джекпот сохраняется примерно
+										каждые 60 минут.
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Активация: </div>
+									<div class="text-small text-xs-body-2">
+										При достижении этого значения джекпот из
+										пассивного состояния переходит в активное.
+										В пассивном состоянии джекпот не может быть
+										выигран. Когда джекпот в активном состоянии, у
+										каждого игрока есть шанс выиграть джекпот при
+										условии, что ставка игрока удовлетворяет условиям
+										розыгрыша джекпота.
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Таймер: </div>
+									<div class="text-small text-xs-body-2">
+										Время в секундах. После активации джекпота
+										включается обратный таймер отсчета времени.
+										Стартовое значение таймера равно величине поля
+										Таймер. Шансы игрока выиграть джекпот
+										увеличиваются при приближении таймера к нулю.
+										Когда таймер кончается, джекпот будет
+										гарантировано выигран первым же игроком, ставка
+										которого удовлетворяет условиям розыгрыша
+										джекпота.
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Процент: </div>
+									<div class="text-small text-xs-body-2">
+										Процент с каждой ставки в джекпот. Значение
+										процента может быть от 1 до 2 (целое число). 1 —
+										рекомендуемое значение. Оно оптимально для залов
+										с небольшим оборотом.
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Макс. значение: </div>
+									<div class="text-small text-xs-body-2">
+										Если максимальное значение 0, оно игнорируется
+										и джекпот выдается по таймеру. Если больше, чем
+										значение активации, джекпот выдается по макс.
+										значению. Чем ближе накопление к нему, тем выше
+										вероятность выпадения джекпота.
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Мин. ставка: </div>
+									<div class="text-small text-xs-body-2">
+										Минимальная ставка при которой игрок принимает
+										участие в розыгрыше джекпота. При игре на меньшие
+										ставки игрок выиграть джекпот не может.
+									</div>
+								</div>
+								<div class="mb-2">
+									<div class="fade-80 text-small text-xs-body-2 text--demibold mb-1">Основное значение: </div>
+									<div class="fade-80 text-small text-xs-body-2 mb-2">
+										Основное значение джекпота, по умолчанию 0. Если
+										значение больше нуля, после выпадения каждого
+										джекпота, значение следующего джекпот будет
+										стартовать с этой величины.
+
+									</div>
+									<div class="text-small text-xs-body-2 text--demibold mb-1">
+										Внимание!!! Основное значение джекпота
+										снимается с баланса зала
+									</div>
+
+
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Сообщение: </div>
+									<div class="text-small text-xs-body-2">
+										Текст сообщения, которое будет выводится на
+										игровом терминале. Допустимы только латинские
+										символы, а также знаки «.», «,», «!», «:».
+									</div>
+								</div>
+								<div class="fade-80 mb-2">
+									<div class="text-small text-xs-body-2 text--demibold mb-1">Время выпадения джекпота: </div>
+									<div class="text-small text-xs-body-2">
+										Вы можете регулировать временной интервал
+										выпадения джекпотов. Минимальный промежуток —
+										1 час в сутки. Время задается по локальному времени
+										зала.
+									</div>
+								</div>
+							</div>
+
 						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Значение джекпота</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Накопленное значение джекпота на текущий момент времени. Это значение может отличаться от
+											реального, так как джекпот сохраняется примерно каждые 60 минут.
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Активация</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											При достижении этого значения джекпот из пассивного состояния переходит в активное. В пассивном
+											состоянии джекпот не может быть выигран. Когда джекпот в активном состоянии, у каждого игрока есть
+											шанс выиграть джекпот при условии, что ставка игрока удовлетворяет условиям розыгрыша джекпота.
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Таймер</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Время в секундах. После активации джекпота включается обратный таймер отсчета времени. Стартовое
+											значение таймера равно величине поля
+											Таймер. Шансы игрока выиграть джекпот увеличиваются при приближении таймера к нулю. Когда таймер
+											кончается, джекпот будет
+											гарантировано выигран первым же игроком, ставка которого удовлетворяет условиям розыгрыша
+											джекпота.
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Процент</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Процент с каждой ставки в джекпот. Значение процента может быть от 1 до 2 (целое число). 1 —
+											рекомендуемое значение. Оно оптимально для залов с небольшим оборотом.
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Макс. значение</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Если максимальное значение 0, оно игнорируется и джекпот выдается по таймеру. Если больше, чем
+											значение активации, джекпот выдается по макс. значению. Чем ближе накопление к нему, тем выше
+											вероятность выпадения джекпота.
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Мин. ставка</div>
+									</td>
+									<td class="table-cell">
+										<div class=" px-4 py-4">
+											<div class="text-body-2 fade-80">
+												Минимальная ставка при которой игрок принимает участие в розыгрыше джекпота. При игре на меньшие
+												ставки игрок выиграть джекпот не может.
+											</div>
+											<div class="text-body-2 text--demibold mt-5">Внимание!!! Указывается в центах</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Основное значение</div>
+									</td>
+									<td class="table-cell">
+										<div class=" px-4 py-4">
+											<div class="text-body-2 fade-80">
+												Основное значение джекпота, по умолчанию 0. Если значение больше нуля, после выпадения каждого
+												джекпота, значение следующего джекпот будет стартовать с этой величины.
+
+											</div>
+											<div class="text-body-2 text--demibold mt-5">Внимание!!! Основное значение джекпота снимается с
+												баланса зала</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Сообщение</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Текст сообщения, которое будет выводится на игровом терминале. Допустимы только латинские символы,
+											а также знаки «.», «,», «!», «:».
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Время выпадения джекпота</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4 py-4">
+											Вы можете регулировать временной интервал выпадения джекпотов. Минимальный промежуток — 1 час в
+											сутки. Время задается по локальному времени зала.
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- ~ /значения слов -->
 
 
-						<!-- ! Сведения о джекпоте -->
-						<!-- Мобильный вариант скрыт на (min-width:$sm) -->
-						<div class="d-sm-none">
-							<div class="mobile-table  mt-5 accordion" data-toggle-cover>
-	
-								<div data-toggle-content data-toggle-height="true" data-toggle-static="true" class="accordion-content">
-									<div class="mobile-table-item control-mobile-item px-6 py-3">
-										<div class="grid grid-spacing-3">
-											<div class="grid-col-12">
-												<div class=" flex">
-													<span class="text-small text-xs-body-2 fade-80 text--demibold">Логи джекпота: </span>
-													<button
-														class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Просмотр</button>
-												</div>
-											</div>
-											<div class="grid-col-12">
-												<div class=" flex">
-													<span class="text-small text-xs-body-2 fade-80 text--demibold">Логи выпадения джекпота:
-													</span>
-													<button
-														class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Просмотр</button>
-												</div>
-											</div>
+					<!-- ! Сведения о джекпоте -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item control-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-12">
+										<div class=" flex">
+											<span class="text-small text-xs-body-2 fade-80 text--demibold">Логи джекпота: </span>
+											<button
+												class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Просмотр</button>
+										</div>
+									</div>
+									<div class="grid-col-12">
+										<div class=" flex">
+											<span class="text-small text-xs-body-2 fade-80 text--demibold">Логи выпадения джекпота:
+											</span>
+											<button
+												class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Просмотр</button>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						
-						<!-- Таблица скрыта на (max-width:$sm) -->
-						<div class="d-none d-sm-block">
-							<table class="table mt-10">
-								<tbody class="table-body">
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Логи джекпота</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<button class="btn btn--primary color-text btn--link btn--underline text-body-2">Просмотр</button>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Логи выпадения джекпота</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<button class="btn btn--primary color-text btn--link btn--underline text-body-2">Просмотр</button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!-- ! /Сведения о джекпоте -->
-
-						<!-- Таблица скрыта на (max-width:$sm) -->
-						<div class="d-none d-sm-block">
-							<table class="table mt-10">
-								<tbody class="table-body">
-								
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Используется джекпот</div>
-										</td>
-										<td class="table-cell">
-											<div class="text-body-2 fade-80 px-4">9 118 (текущий зал)</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Привязать джекпот зала</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-field-small field-xsmall flex-grow">
-													<div class="form-input-cover">
-														<select class="form-input pr-10">
-															<option value="">18 321 (9 010)</option>
-															<option value="">18 322 (9 010)</option>
-														</select>
-														<div class="form-input-end pr-4 pe-none">
-															<svg class="icon text-small">
-																<use xlink:href="img/icons.svg#to-right" />
-															</svg>
-														</div>
-													</div>
-												</label>
-												<button class="btn btn-small btn--primary btn--fill ml-2">Применить</button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- ^ Редактировать настройки -->
-						<!-- Таблица скрыта на (max-width:$sm) -->
-						<div class="d-none d-sm-block">
-							<table class="table mt-10">
-								<tbody class="table-body">
-									<tr class="table-row">
-										<td class="table-cell" colspan="100%">
-											<div class="text--demibold text--center">Редактировать настройки</div>
-										</td>
-									</tr>
-
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Включен</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-checkbox">
-													<input type="checkbox" class="form-input-checkbox">
-													<div class="form-checkbox-target">
-														<svg class="icon">
-															<use xlink:href="./img/icons.svg#gal-ochka" />
-														</svg>
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Процент</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-field-small field-xsmall flex-grow">
-													<div class="form-input-cover">
-														<select class="form-input pr-10">
-															<option value="">2</option>
-															<option value="">3</option>
-														</select>
-														<div class="form-input-end pr-4 pe-none">
-															<svg class="icon text-small">
-																<use xlink:href="img/icons.svg#to-right" />
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Таймер</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-field-small mr-2">
-													<div class="form-input-cover">
-														<div class="text-body-2 fade-80 mr-1">Часов:</div>
-														<select class="form-input pr-10">
-															<option value="">00</option>
-															<option value="">02</option>
-															<option value="">03</option>
-														</select>
-														<div class="form-input-end pr-4 pe-none">
-															<svg class="icon text-small">
-																<use xlink:href="img/icons.svg#to-right" />
-															</svg>
-														</div>
-													</div>
-												</label>
-												<label class="form-field form-field-small mr-2">
-													<div class="form-input-cover">
-														<div class="text-body-2 fade-80 mr-1">Минут:</div>
-														<select class="form-input pr-10">
-															<option value="">00</option>
-															<option value="">02</option>
-															<option value="">03</option>
-														</select>
-														<div class="form-input-end pr-4 pe-none">
-															<svg class="icon text-small">
-																<use xlink:href="img/icons.svg#to-right" />
-															</svg>
-														</div>
-													</div>
-												</label>
-												<label class="form-field form-field-small">
-													<div class="form-input-cover">
-														<div class="text-body-2 fade-80 mr-1">Секунд:</div>
-														<select class="form-input pr-10">
-															<option value="">00</option>
-															<option value="">02</option>
-															<option value="">03</option>
-														</select>
-														<div class="form-input-end pr-4 pe-none">
-															<svg class="icon text-small">
-																<use xlink:href="img/icons.svg#to-right" />
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									
-								</tbody>
-							</table>
-						</div>
-						<!-- ^ /Редактировать настройки -->
-
-
-						<!-- ~ Время выпадения джекпота -->
-						<!-- Таблица скрыта на (max-width:$sm) -->
-						<div class="d-none d-sm-block">
-							<table class="table mt-10">
-								<tbody class="table-body">
-									<tr class="table-row">
-										<td class="table-cell" colspan="100%">
-											<div class="text--demibold text--center">Время выпадения джекпота</div>
-										</td>
-									</tr>
-
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Активировать</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-checkbox">
-													<input type="checkbox" class="form-input-checkbox">
-													<div class="form-checkbox-target">
-														<svg class="icon">
-															<use xlink:href="./img/icons.svg#gal-ochka" />
-														</svg>
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Начальное время</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-field-small field-xsmall flex-grow">
-													<div class="form-input-cover">
-														<input type="text" class="form-input" placeholder="00:00">
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Конечное время</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex px-4">
-												<label class="form-field form-field-small field-xsmall flex-grow">
-													<div class="form-input-cover">
-														<input type="text" class="form-input" placeholder="00:00">
-													</div>
-												</label>
-											</div>
-										</td>
-									</tr>
-									<tr class="table-row">
-										<td class="table-cell table-cell--mark table-cell--middle">
-											<div class="text-body-2 text--demibold text--center">Локальное время</div>
-										</td>
-										<td class="table-cell">
-											<div class="flex flex-align-center px-4">
-												<div class="text-body-2 fade-80">22:44:44</div>
-												<button class="btn btn-small btn--primary btn--fill ml-3">Скорректировать</button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!-- ~ /Время выпадения джекпота -->
 					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Логи джекпота</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<button class="btn btn--primary color-text btn--link btn--underline text-body-2">Просмотр</button>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Логи выпадения джекпота</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<button class="btn btn--primary color-text btn--link btn--underline text-body-2">Просмотр</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- ! /Сведения о джекпоте -->
+
+					<!-- * Используется джекпот -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item control-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-12">
+										<div class="text-small text-xs-body-2 fade-80">
+											<span class=" text--demibold">Логи джекпота: </span>
+											<span>9 118 (текущий зал)</span>
+										</div>
+										<!-- <div class=" flex">
+											<button
+												class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Просмотр</button>
+										</div> -->
+									</div>
+									<div class="grid-col-12">
+										<div class="flex-align-center flex">
+											<label class="form-field form-field-small field-xsmall w-66">
+												<div class="form-input-cover">
+													<select class="form-input pr-10">
+														<option value="">18 321 (9 010)</option>
+														<option value="">18 322 (9 010)</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<button
+												class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3 ">Применить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Используется джекпот</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">9 118 (текущий зал)</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Привязать джекпот зала</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-field-small field-xsmall flex-grow">
+												<div class="form-input-cover">
+													<select class="form-input pr-10">
+														<option value="">18 321 (9 010)</option>
+														<option value="">18 322 (9 010)</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<button class="btn btn-small btn--primary btn--fill ml-2">Применить</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- * /Используется джекпот -->
+
+					<!-- ^ Редактировать настройки -->
+					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item control-mobile-item table-cell--mark px-6 py-3 ">
+								<div class="text-small text-xs-body-2 text--demibold text--center">
+									Редактировать настройки
+								</div>
+							</div>
+							<div class="mobile-table-item control-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-12">
+										<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">
+											Таймер:
+										</div>
+										<div class="flex">
+											<label class="form-field form-field-small w-33 mr-2">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">Ч:</div>
+													<select class="form-input pr-8">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-2 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<label class="form-field form-field-small w-33 mr-2">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">М:</div>
+													<select class="form-input pr-8">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-2 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<label class="form-field form-field-small w-33">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">С:</div>
+													<select class="form-input pr-8">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-2 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</div>
+									</div>
+									<div class="grid-col-12">
+										<label class="form-field form-field-small field-xsmall flex-grow">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">
+												Процент:
+											</div>
+											<div class="form-input-cover">
+												<select class="form-input pr-10">
+													<option value="">2</option>
+													<option value="">3</option>
+												</select>
+												<div class="form-input-end pr-4 pe-none">
+													<svg class="icon text-small">
+														<use xlink:href="img/icons.svg#to-right" />
+													</svg>
+												</div>
+											</div>
+										</label>
+
+									</div>
+									<div class="grid-col-12">
+										<label class="form-field form-checkbox">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mr-2">Включен:</div>
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="text--demibold text--center">Редактировать настройки</div>
+									</td>
+								</tr>
+
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Включен</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Процент</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-field-small field-xsmall flex-grow">
+												<div class="form-input-cover">
+													<select class="form-input pr-10">
+														<option value="">2</option>
+														<option value="">3</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Таймер</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-field-small mr-2">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">Часов:</div>
+													<select class="form-input pr-10">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<label class="form-field form-field-small mr-2">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">Минут:</div>
+													<select class="form-input pr-10">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+											<label class="form-field form-field-small">
+												<div class="form-input-cover">
+													<div class="text-body-2 fade-80 mr-1">Секунд:</div>
+													<select class="form-input pr-10">
+														<option value="">00</option>
+														<option value="">02</option>
+														<option value="">03</option>
+													</select>
+													<div class="form-input-end pr-4 pe-none">
+														<svg class="icon text-small">
+															<use xlink:href="img/icons.svg#to-right" />
+														</svg>
+													</div>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					<!-- ^ /Редактировать настройки -->
+
+
+					<!-- ~ Время выпадения джекпота -->
+
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5">
+							<div class="mobile-table-item control-mobile-item table-cell--mark px-6 py-3 ">
+								<div class="text-small text-xs-body-2 text--demibold text--center">
+									Время выпадения джекпота
+								</div>
+							</div>
+							<div class="mobile-table-item control-mobile-item px-6 py-3">
+								<div class="grid grid-spacing-3">
+									<div class="grid-col-12">
+										<label class="form-field form-checkbox">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mr-2">Активировать:</div>
+											<input type="checkbox" class="form-input-checkbox">
+											<div class="form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="./img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-12">
+										<label class="form-field form-field-small">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Начальное время:</div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" placeholder="" value="00:00">
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-12">
+										<label class="form-field form-field-small">
+											<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Конечное время:</div>
+											<div class="form-input-cover">
+												<input type="text" class="form-input" placeholder="" value="00:00">
+											</div>
+										</label>
+									</div>
+									<div class="grid-col-12">
+										<div class=" flex">
+											<span class="text-small text-xs-body-2 fade-80 text--demibold">
+												Локальное время: <span class="text--regular">22:44:44</span>
+											</span>
+											<button
+												class="btn btn--primary color-text btn--link btn--underline text-small text-xs-body-2 ml-3">Скорректировать</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+								<tr class="table-row">
+									<td class="table-cell" colspan="100%">
+										<div class="text--demibold text--center">Время выпадения джекпота</div>
+									</td>
+								</tr>
+
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Активировать</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Начальное время</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-field-small field-xsmall flex-grow">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" placeholder="00:00">
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Конечное время</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex px-4">
+											<label class="form-field form-field-small field-xsmall flex-grow">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" placeholder="00:00">
+												</div>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Локальное время</div>
+									</td>
+									<td class="table-cell">
+										<div class="flex flex-align-center px-4">
+											<div class="text-body-2 fade-80">22:44:44</div>
+											<button class="btn btn-small btn--primary btn--fill ml-3">Скорректировать</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- ~ /Время выпадения джекпота -->
+
+
+					<!-- ! Таблица -->
+
+					<div class="d-sm-none">
+						<div class="mobile-table  mt-5" data-tab-cover>
+							<div class="mobile-table-item mobile-table-tabs">
+								<button class="mobile-table-tabs-item btn btn--primary" data-tab-link="table-tab-1">
+									<span class="text-small text-xs-body-2 text--demibold">BRONZE</span>
+								</button>
+								<button class="mobile-table-tabs-item btn btn--primary" data-tab-link="table-tab-2">
+									<span class="text-small text-xs-body-2 text--demibold">SILVER</span>
+								</button>
+								<button class="mobile-table-tabs-item btn btn--primary" data-tab-link="table-tab-3">
+									<span class="text-small text-xs-body-2 text--demibold">GOLD</span>
+								</button>
+								<button class="mobile-table-tabs-item btn btn--primary" data-tab-link="table-tab-4">
+									<span class="text-small text-xs-body-2 text--demibold">DIAMOND</span>
+								</button>
+							</div>
+
+							<div class="mobile-table-item control-mobile-item">
+								<div class="tab-content-cover">
+									<% for(let i = 1; i <= 4; i++){ %>
+									<div class="tab-content px-6 py-3" data-tab-content="table-tab-<%= i %>">
+										<div class="grid grid-spacing-3">
+											<div class="grid-col-12">
+												<label class="form-field form-field-small">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Мин. ставка:</div>
+													<div class="form-input-cover">
+														<input type="text" class="form-input" placeholder="" value="">
+													</div>
+												</label>
+											</div>
+											<div class="grid-col-12">
+												<label class="form-field form-field-small">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Джекпот:</div>
+													<div class="form-input-cover">
+														<input type="text" class="form-input" placeholder="" value="0" disabled>
+													</div>
+												</label>
+											</div>
+											<div class="grid-col-12">
+												<label class="form-field form-field-small">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Активация:</div>
+													<div class="form-input-cover">
+														<input type="text" class="form-input" placeholder="" value="0">
+													</div>
+												</label>
+											</div>
+											<div class="grid-col-12">
+												<label class="form-field form-field-small">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Основное значение:</div>
+													<div class="form-input-cover">
+														<input type="text" class="form-input" placeholder="" value="0">
+													</div>
+												</label>
+											</div>
+											<div class="grid-col-12">
+												<label class="form-field form-field-small">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mb-2">Макс. значение:</div>
+													<div class="form-input-cover">
+														<input type="text" class="form-input" placeholder="" value="0">
+													</div>
+												</label>
+											</div>
+											<div class="grid-col-12">
+												<label class="form-field form-checkbox">
+													<div class="text-small text-xs-body-2 fade-80 text--demibold mr-2">Активен:</div>
+													<input type="checkbox" class="form-input-checkbox">
+													<div class="form-checkbox-target">
+														<svg class="icon">
+															<use xlink:href="./img/icons.svg#gal-ochka" />
+														</svg>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<% } %>
+								</div>
+							</div>
+						</div>
+
+						<label class="form-field form-checkbox mt-5">
+							<input type="checkbox" class="form-input-checkbox">
+							<div class="form-checkbox-target">
+								<svg class="icon">
+									<use xlink:href="./img/icons.svg#gal-ochka" />
+								</svg>
+							</div>
+							<div class="text-small text-xs-body-2 fade-80 text--demibold ml-2">Применить основное значение к джекпоту
+							</div>
+						</label>
+					</div>
+
+					<!-- Таблица скрыта на (max-width:$md) -->
+					<div class="d-none d-md-block">
+						<div class="pt-10"></div>
+						<div class="pt-10"></div>
+						<table class="table">
+							<tbody class="table-body">
+								<tr class="table-row table-head">
+									<td class="table-cell text-body-2 text--demibold text--center"></td>
+									<td class="table-cell text-body-2 text--demibold text--center">Мин. ставка</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Джекпот</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Активация</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Основное значение</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Макс. значение</td>
+									<td class="table-cell text-body-2 text--demibold text--center">Активен</td>
+								</tr>
+								<% for(let i=0; i < 5; i++ ){ %>
+									<tr class="table-row">
+										<td class="table-cell table-cell--mark text-body-2 text--center">BRONZE</td>
+										<td class="table-cell text-body-2 text--center w-15">
+											<label class="form-field px-2">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" value="0">
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center w-15">
+											<label class="form-field px-2">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" value="0" disabled>
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center w-15">
+											<label class="form-field px-2">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" value="0">
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center w-15">
+											<label class="form-field px-2">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" value="0">
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center w-15">
+											<label class="form-field px-2">
+												<div class="form-input-cover">
+													<input type="text" class="form-input" value="0">
+												</div>
+											</label>
+										</td>
+										<td class="table-cell text-body-2 text--center">
+											<label class="form-field form-checkbox">
+												<input type="checkbox" class="form-input-checkbox">
+												<div class="form-checkbox-target mx-auto">
+													<svg class="icon">
+														<use xlink:href="./img/icons.svg#gal-ochka" />
+													</svg>
+												</div>
+											</label>
+										</td>
+									</tr>
+
+									<% } %>
+										<tr class="table-row">
+											<td class="table-cell" colspan="100%">
+												<label class="form-field form-checkbox py-4 px-4">
+													<input type="checkbox" class="form-input-checkbox">
+													<div class="form-checkbox-target">
+														<svg class="icon">
+															<use xlink:href="./img/icons.svg#gal-ochka" />
+														</svg>
+													</div>
+													<div class="text-body-2  fade-80 ml-2">Применить основное значение к джекпоту</div>
+												</label>
+
+											</td>
+										</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- ! /Таблица -->
 				</div>
 			</div>
+		</div>
 	</div>
 </body>
 

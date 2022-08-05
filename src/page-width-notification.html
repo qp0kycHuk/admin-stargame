@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Уведомление - Stargame</title>
+</head>
+
+<body>
+  <div class="root">
+    <%= _.template(require('./html-includes/header.html').default)() %>
+
+    <div class="wrapper">
+      <div class="wrapper-inner">
+        <%= _.template(require('./html-includes/sidebar.html').default)() %>
+        <div class="content container">
+          <div class="text-h6 text-md-h4 color-primary mb-5">Уведомление</div>
+
+          <button class="btn btn--primary btn--fill mb-3" data-fancybox-modal data-src="notification.html"
+            data-type="ajax">
+            Открыть уведомление
+          </button>
+          <button class="btn btn--red btn--fill mb-3" data-fancybox-modal data-src="notification-red.html"
+            data-type="ajax">
+            Открыть уведомление
+          </button>
+          <button class="btn btn--green btn--fill mb-3" data-fancybox-modal data-src="notification-green.html"
+            data-type="ajax">
+            Открыть уведомление
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      Fancybox.modal.open('notification.html', { type: 'ajax' })
+    })
+  </script>
+</body>
+
+</html>
