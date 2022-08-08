@@ -317,7 +317,7 @@
 								<div class="grid grid-spacing-3">
 									<div class="grid-col-12">
 										<div class="text-small text-xs-body-2 fade-80">
-											<span class=" text--demibold">Логи джекпота: </span>
+											<span class="text--demibold">Используется джекпот: </span>
 											<span>9 118 (текущий зал)</span>
 										</div>
 										<!-- <div class=" flex">
@@ -326,7 +326,8 @@
 										</div> -->
 									</div>
 									<div class="grid-col-12">
-										<div class="flex-align-center flex">
+										<div class="text-small text-xs-body-2 fade-80 mb-2 text--demibold">Привязать джекпот зала</div>
+										<div class="flex-align-center flex ">
 											<label class="form-field form-field-small field-xsmall w-66">
 												<div class="form-input-cover">
 													<select class="form-input pr-10">
@@ -389,6 +390,35 @@
 						</table>
 					</div>
 					<!-- * /Используется джекпот -->
+
+
+					<!-- Таблица скрыта на (max-width:$sm) -->
+					<div class="d-none d-sm-block">
+						<table class="table mt-10">
+							<tbody class="table-body">
+
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Последнее изменение</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">2022-06-17 09:51:56</div>
+									</td>
+								</tr>
+								<tr class="table-row">
+									<td class="table-cell table-cell--mark table-cell--middle">
+										<div class="text-body-2 text--demibold text--center">Текущее время сервера</div>
+									</td>
+									<td class="table-cell">
+										<div class="text-body-2 fade-80 px-4">2022-08-08 19:48:56</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
+
 
 					<!-- ^ Редактировать настройки -->
 					<!-- Мобильный вариант скрыт на (min-width:$sm) -->
@@ -901,6 +931,19 @@
 						</table>
 					</div>
 					<!-- ! /Таблица -->
+
+
+
+					<label class="form-field mt-10">
+						<div class="text-body-2 text--demibold mb-2">Сообщение</div>
+						<div class="form-input-cover">
+							<textarea class="form-input"></textarea>
+						</div>
+					</label>
+					<div class="flex mt-5">
+						<button class="btn btn--primary btn--fill">Обновить настройки</button>
+						<button class="btn btn--primary btn--light ml-3">Обнулить</button>
+					</div>
 				</div>
 			</div>
 		</div>
