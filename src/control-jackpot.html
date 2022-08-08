@@ -831,9 +831,10 @@
 									<td class="table-cell text-body-2 text--demibold text--center">Макс. значение</td>
 									<td class="table-cell text-body-2 text--demibold text--center">Активен</td>
 								</tr>
-								<% for(let i=0; i < 5; i++ ){ %>
+								<% let list = ['BRONZE', 'SILVER', 'GOLD', 'DIAMOND']; %>
+								<% for(let i=0; i < list.length; i++ ){ %>
 									<tr class="table-row">
-										<td class="table-cell table-cell--mark text-body-2 text--center">BRONZE</td>
+										<td class="table-cell table-cell--mark text-body-2 text--center"><%= list[i] %></td>
 										<td class="table-cell text-body-2 text--center w-15">
 											<label class="form-field px-2">
 												<div class="form-input-cover">
