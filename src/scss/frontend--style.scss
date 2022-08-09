@@ -686,10 +686,18 @@ body {
 	}
 
 	&-content {
+
+
 		@media(max-width:$sm) {
 			border: 1px solid var(--color-text-10);
 		}
 
+	}
+
+	&-inner {
+		@media(min-width:$sm) {
+			height: auto !important;
+		}
 	}
 
 	&-lines {
